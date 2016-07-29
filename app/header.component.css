@@ -1,0 +1,89 @@
+
+/*
+Recreate navbar Bootstrap
+Change some css styles
+ */
+.navColor{
+
+  background: white;
+  border-bottom:1px solid lightgray;
+
+}
+
+a{
+  color: #464646;
+}
+
+.dropped{
+  cursor: pointer ;
+}
+
+
+.dropped a{
+  padding :15px;
+  padding-top: 20px;
+  text-decoration: none;
+}
+
+
+.navbar-nav .open  .dropdown-menu{
+  position: absolute;
+  right: 0;
+  z-index: 1000;
+  float: left;
+  font-size: 16px !important;
+  text-align: left;
+  list-style: none;
+  background-color: white;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+
+}
+
+div.navdiv{
+  float:right;
+  padding: 15px;
+  margin-right: 10px;
+}
+
+div{
+  display:inline-block;
+}
+
+.activated{
+  background: #337ab7;
+  color:white;
+
+}
+
+
+li > a:hover{
+  background:#337ab7 !important;
+  color: white;
+}
+
+
+.navfixed{
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+
+}
+/*
+
+MEDIEA
+
+
+ */
+@media(max-width: 768px){
+  div.navdiv{
+    padding: 10px;
+  }
+
+}

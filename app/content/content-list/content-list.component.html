@@ -1,0 +1,28 @@
+<div class="media  col-xs-12 col-sm-10 col-sm-offset-1">
+
+    <div class="media-left media-middle">
+      <a calss="image">
+        <img class="media-object "
+             [src]="article.imgUrl"
+             alt="Not loaded yet">
+      </a>
+    </div>
+
+
+    <div class="media-body page-header">
+      <small
+        class="selectors"
+        *ngFor="let section of article.sections"> {{section}}</small>
+
+      <h3 class="media-heading">{{article.header}} <small>| {{article.authorName}}</small></h3>
+
+      {{article.description}} <br><br>
+
+      <button class="btn btn-primary" (click)="selectedItem()">Read more</button>
+    </div>
+
+
+
+</div>
+
+
