@@ -9,6 +9,11 @@ input{
   margin : 2px;
 }
 
+
+
+
+
+/*MEDIA ____________*/
 @media(max-width: 768px){
   img{
     width: 220px;

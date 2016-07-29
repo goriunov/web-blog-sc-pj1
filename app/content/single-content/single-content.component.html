@@ -1,9 +1,14 @@
 <div class="media  col-xs-12 col-sm-10 col-sm-offset-1">
-  <img class="col-sm-6 col-sm-offset-3" style="margin-bottom: 5px;" [src]="article.imgUrl" alt="Not loaded yet">
+  <img class="col-sm-6 col-sm-offset-3"
+       style="margin-bottom: 5px;"
+       [src]="article.imgUrl"
+       alt="Not loaded yet">
 
 
   <div  class=" col-xs-12 ">
-    <small class="selectors" style="color: gray;" *ngFor="let section of article.sections"> {{section}}</small>
+    <small class="selectors"
+           style="color: gray;"
+           *ngFor="let section of article.sections"> {{section}}</small>
 
     <h2>{{article.header}}<small>| {{article.authorName}}</small></h2>
 

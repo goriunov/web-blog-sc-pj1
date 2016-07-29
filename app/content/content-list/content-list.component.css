@@ -1,9 +1,11 @@
 .media{
   margin-top: 30px;
 }
+
 img{
 width: 130px;
 }
+
 .selectors{
   color: dimgray;
 }
@@ -24,7 +26,7 @@ float:right;
 
 
 
-/*Media*/
+/*Media _____________-*/
 @media(min-width : 768px){
   img{
     width: 240px;

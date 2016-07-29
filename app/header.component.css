@@ -3,11 +3,13 @@
 Recreate navbar Bootstrap
 Change some css styles
  */
-.navColor{
 
+
+/*Using '!important' to prevent styles from bootstrap '!important'
+ is  only in this file , all others free from '!important'  */
+.navColor{
   background: white;
   border-bottom:1px solid lightgray;
-
 }
 
 a{
@@ -18,13 +20,11 @@ a{
   cursor: pointer ;
 }
 
-
 .dropped a{
   padding :15px;
   padding-top: 20px;
   text-decoration: none;
 }
-
 
 .navbar-nav .open  .dropdown-menu{
   position: absolute;
@@ -56,25 +56,24 @@ div{
 }
 
 .activated{
-  background: #337ab7;
+  background: #337ab7 !important;
   color:white;
-
 }
-
 
 li > a:hover{
   background:#337ab7 !important;
   color: white;
 }
 
-
 .navfixed{
   position: fixed;
   top:0;
   left:0;
   right:0;
-
 }
+
+
+
 /*
 
 MEDIEA
