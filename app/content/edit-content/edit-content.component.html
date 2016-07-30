@@ -2,6 +2,7 @@
 
 <div class="col-sm-10 col-sm-offset-1">
   <form [formGroup]="myForm" >
+    <div *ngIf="shadow">
     <!--Head of article-->
     <fieldset class="form-group">
       <label for="head">Header of article</label>
@@ -45,17 +46,14 @@
             style="height: auto">
 
          <span *ngFor="let selectedSection of myForm.find('sections').controls ; let i = index">
-           <input *ngIf="id == null" class="btn btn-danger"
+           <input  class="btn btn-danger"
                    (click)="onUnSelect(i)"
                    formControlName="{{i}}"
                    readonly="readonly">
-           <input *ngIf="id != null" class="btn btn-primary"
-                  formControlName="{{i}}"
-                  readonly="readonly">
 
          </span></div><br>
 
-      <div *ngIf="id == null">
+      <div>
       <button *ngFor="let selector of sections"
               class ="btn btn-default"
               (click)="onSelect(selector)">+ {{selector}}</button>
@@ -63,6 +61,7 @@
     </fieldset>
 
 <!-- IMPORTANT CKEDITOR DO NOT TOUCH THIS PART OTHER WISE WILL LOOSE CK EDITOR -->
+  </div>
     <fieldset class="form-group">
       <label > Article</label>
       <textarea
@@ -83,3 +82,4 @@
 
   </form>
 </div>
+
