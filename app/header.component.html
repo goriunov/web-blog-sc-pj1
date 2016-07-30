@@ -1,0 +1,76 @@
+<div class="container-fluid">
+  <div class="navheader">
+    <nav class="navbar navColor navfixed ">
+      <!-- Brand -->
+      <a class="navbar-brand "
+         [routerLink]="['/content/all']">Our Logo</a>
+      <!-- Links on main menu -->
+      <ul class="nav navbar-nav hidden-xs">
+        <li class="nav-item">
+          <a class="nav-link"
+             routerLinkActive="activated"
+             [routerLink]="['content/DataBase']" >DataBase</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+             routerLinkActive="activated"
+             [routerLink]="['content/MobileDev']">MobileDev</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+             routerLinkActive="activated"
+             [routerLink]="['content/WebDev']">WebDev</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+             routerLinkActive="activated"
+             [routerLink]="['content/Software']">Software</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+             routerLinkActive="activated"
+             [routerLink]="['content/Networking']">Networking</a>
+        </li>
+      </ul>
+
+      <!-- Drop down menus  -->
+      <div class="navbar-nav nav navdiv " >
+
+        <!-- 1 Drop down Menu -->
+          <div class="dropdown hidden-sm hidden-md hidden-lg dropped" dropDown >
+
+            <a role="button" >Menu<span class="caret"></span></a>
+            <ul class="dropdown-menu dropdown-menu-right " >
+              <li><a routerLinkActive="activated"
+                     [routerLink]="['content/DataBase']">DataBase</a></li>
+
+              <li> <a routerLinkActive="activated"
+                      [routerLink]="['content/MobileDev']">MobileDev</a></li>
+
+              <li><a routerLinkActive="activated"
+                     [routerLink]="['content/WebDev']">WebDev</a></li>
+
+              <li><a routerLinkActive="activated"
+                     [routerLink]="['content/Software']">Software</a></li>
+
+              <li><a routerLinkActive="activated"
+                     [routerLink]="['content/Networking']">Networking</a></li>
+            </ul>
+          </div>
+
+        <!-- 2 drop  down User   -->
+        <div class="dropdown dropped " dropDown>
+          <a  role="button" >User<span class="caret"></span></a>
+          <ul class="dropdown-menu pull-right">
+            <li><a routerLinkActive="activated" [routerLink]="['/create-post']">Create Post</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Sign In</a></li>
+            <li><a href="#">Sign Up</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Log Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>

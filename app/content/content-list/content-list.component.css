@@ -1,0 +1,43 @@
+.media{
+  margin-top: 30px;
+}
+
+
+img{
+width: 130px;
+}
+
+.selectors{
+  color: dimgray;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  margin-top: 5px;
+}
+
+button{
+float:right;
+}
+
+
+
+
+
+
+
+/*Media _____________-*/
+@media(min-width : 768px){
+  img{
+    width: 240px;
+  }
+
+}
+
+@media(max-width : 400px){
+  img{
+    display: none;
+  }
+
+}

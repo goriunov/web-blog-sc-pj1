@@ -1,0 +1,22 @@
+img{
+  margin:10px;
+  width: 400px;
+}
+button{
+  margin: 5px;
+}
+input{
+  margin : 2px;
+}
+
+
+
+
+
+/*MEDIA ____________*/
+@media(max-width: 768px){
+  img{
+    width: 220px;
+  }
+
+}

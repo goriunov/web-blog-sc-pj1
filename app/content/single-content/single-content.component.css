@@ -1,0 +1,18 @@
+img{
+  width: 400px;
+}
+image{
+  text-align: center;
+}
+
+
+
+
+
+/*Media _________*/
+@media(max-width : 400px){
+  img{
+    width: 300px;
+  }
+
+}
