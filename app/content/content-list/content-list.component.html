@@ -11,7 +11,7 @@
         class="selectors"
         *ngFor="let section of article.sections"> {{section}}</small>
       <h3 class="media-heading">{{article.header}} <small>| {{article.authorName}}</small></h3>
-      {{article.description}} <br><br>
+      <p class="wrap">{{article.description}} </p><br><br>
       <button class="btn btn-primary" (click)="selectedItem()">Read more</button>
     </div>
 
