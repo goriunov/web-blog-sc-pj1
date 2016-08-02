@@ -2,9 +2,24 @@
   margin-top: 30px;
 }
 
+small{
+  font-size: 14px;
+}
+
+.spacing{
+  margin:10px;
+}
+
+.imgs{
+  float:left;
+}
 
 img{
-width: 130px;
+  width: 250px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin:10px;
+
 }
 
 .selectors{
@@ -16,44 +31,33 @@ a{
   color: black;
   margin-top: 5px;
 }
+.onhover:hover{
+  background: #f2f2f2;
+  border-radius: 10px;
+  cursor: pointer;
+}
 
 button{
 float:right;
 }
 
 
-
-.wrap {
-  overflow: auto;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-
-  -ms-word-break: break-all;
-  /* This is the dangerous one in WebKit, as it breaks things wherever */
-  word-break: break-all;
-  /* Instead use this non-standard one: */
-  word-break: break-word;
-
-  /* Adds a hyphen where the word breaks, if supported (No Blink) */
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;   /* IE */
-}
-
-
-
 /*Media _____________-*/
 @media(min-width : 768px){
   img{
-    width: 240px;
+    width: 300px;
   }
-
 }
 
-@media(max-width : 400px){
-  img{
+@media(max-width : 768px){
+  .imgs{
+    float:none;
+    text-align:center;
+   }
+}
+
+@media(max-width : 350px){
+  .imgs{
     display: none;
   }
-
 }

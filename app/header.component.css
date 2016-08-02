@@ -7,9 +7,13 @@ Change some css styles
 
 /*Using '!important' to prevent styles from bootstrap '!important'
  is  only in this file , all others free from '!important'  */
+
 .navColor{
   background: white;
   border-bottom:1px solid lightgray;
+}
+small{
+  font-size: 13px;
 }
 
 a{
@@ -52,12 +56,13 @@ div.navdiv{
 }
 
 div{
-  display:inline-block;
+  display:inline-block ;
 }
 
 .activated{
   background: #337ab7 !important;
   color:white;
+  display: block ;
 }
 
 li > a:hover{

@@ -1,19 +1,32 @@
-<div class="media  col-xs-12 col-sm-10 col-sm-offset-1">
+<div  class="media  col-xs-12 onhover" *ngIf = "article">
 <!--IMAGE ON ALL CONTENT PAGE-->
-    <div class="media-left media-middle ">
-        <img class="media-object "
-             [src]="article.imgUrl"
-             alt="Not loaded yet">
-    </div>
-<!--TEXT ON ALL CONTENT PAGE-->
-    <div class="media-body page-header">
-      <small
-        class="selectors"
-        *ngFor="let section of article.sections"> {{section}}</small>
-      <h3 class="media-heading">{{article.header}} <small>| {{article.authorName}}</small></h3>
-      <p class="wrap">{{article.description}} </p><br><br>
-      <button class="btn btn-primary" (click)="selectedItem()">Read more</button>
-    </div>
+  <a (click)="some ? some=false : some = true">
+    <div class="row">
+      <div class="spacing ">
+        <div class="imgs" >
+          <img [src]="article.imgUrl"
+               alt="Not loaded yet"
+               onError="this.src = 'http://www.blingyourband.com/skin/frontend/blingyourband/blingyourbands/images/no-available-image.png'">
+        </div>
+
+        <div >
+            <small *ngFor="let section of article.sections"> {{section}} </small>
+            <h2 class="media-heading">{{article.header}} <small>| {{article.authorName}}</small></h2>
+              <strong>Description:</strong><br>
+              <strong>"</strong>
+              <em> {{article.description}} </em>
+              <strong>"</strong>
+          </div>
+        </div>
+
+        <div class="col-xs-12" *ngIf="some" >
+            <p [innerHtml]="article.article"></p>
+            <br>
+            <a style="margin-bottom: 10px;" class="btn btn-default" [routerLink]="['/edit' , index]">Edit</a>
+            <button style="margin-bottom: 10px;" class="btn btn-default" (click)="onDelete()">Delete</button>
+        </div>
+      </div>
+    </a>
 
 </div>
 

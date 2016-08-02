@@ -31,6 +31,7 @@ var barrels = [
     'app/content/content-list',
     'app/content/edit-content',
     'app/content/edit-content/single-content',
+    'app/auth-user',
 ];
 var cliSystemConfigPackages = {};
 barrels.forEach(function (barrelName) {
