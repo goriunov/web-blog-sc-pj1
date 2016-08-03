@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="navheader">
-    <nav class="navbar navColor navfixed ">
+    <nav class="navbar navbar-inverse navfixed ">
       <!-- Brand -->
       <a class="navbar-brand "
          [routerLink]="['/content/all']">Our Logo</a>
@@ -31,11 +31,13 @@
 
         <!-- 2 drop  down User   -->
         <div class="dropdown dropped " dropDown>
-          <a  role="button">User<span class="caret"></span></a>
+          <a (click)="checkUser()" role="button">User<span class="caret"></span></a>
           <ul class="dropdown-menu pull-right">
-            <li><a routerLinkActive="activated" [routerLink]="['/create-post']" *ngIf="user" >Create Post</a></li>
-            <li><a (click)="faceBookLogIn()" *ngIf="!user">LogIn with FaceBook</a></li>
-            <li><a (click)="faceBookLogOut()"  *ngIf="user" >Log Out</a></li>
+              <li *ngIf="user" style="margin-left: 5px;"><img class="displayUserImg" [src]="userImg" > {{userName}}</li>
+              <li *ngIf="user" role="separator" class="divider"></li>
+              <li><a routerLinkActive="activated" [routerLink]="['/create-post']" *ngIf="user" >Create Post</a></li>
+              <li><a (click)="faceBookLogIn()"  *ngIf="!user">Login with Facebook</a></li>
+              <li><a (click)="faceBookLogOut()"  *ngIf="user" >Log Out</a></li>
           </ul>
         </div>
       </div>

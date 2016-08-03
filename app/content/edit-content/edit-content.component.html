@@ -1,8 +1,7 @@
 <!--ALL FORM INPUTS FOR ADD AND  EDIT -->
-
 <div class="col-sm-10 col-sm-offset-1">
   <div *ngIf="auth">
-
+    <!--Form creation-->
   <form [formGroup]="myForm" >
 
     <div *ngIf="shadow">
@@ -15,7 +14,7 @@
              type="text">
     </fieldset>
 
-<!--Description -->
+    <!--Description -->
     <fieldset class="form-group">
       <label for="description">Description</label>
       <textarea formControlName="description"
@@ -58,21 +57,17 @@
          </span></div><br>
 
       <div>
+        <!--Button to select-->
       <button *ngFor="let selector of sections"
               class ="btn btn-default"
               (click)="onSelect(selector)">+ {{selector}}</button>
         </div>
     </fieldset>
     </div>
-
-
-
-
-
-
   </form>
-
   </div>
+
+
   <!-- IMPORTANT CKEDITOR DO NOT TOUCH THIS PART OTHER WISE WILL LOOSE CK EDITOR -->
     <fieldset class="form-group">
       <label > Article</label>
@@ -82,13 +77,14 @@
         name="editor1">{{selectedContent ? selectedContent.article : ''}}</textarea>
     </fieldset>
 
-
+  <!--Buttons  save and cancel-->
     <button
       *ngIf="auth"
       type="button"
       [disabled]='!myForm.valid'
       (click)="onSubmit()"
       class="btn btn-primary">{{id ? 'Save' : 'Create article'}}</button>
+
 
     <button
       *ngIf="auth"

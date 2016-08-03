@@ -7,17 +7,21 @@ Change some css styles
 
 /*Using '!important' to prevent styles from bootstrap '!important'
  is  only in this file , all others free from '!important'  */
-
-.navColor{
-  background: white;
-  border-bottom:1px solid lightgray;
-}
 small{
   font-size: 13px;
 }
 
+.displayUserImg{
+  margin-bottom: 5px;
+  float:left;
+  width:30px;
+  border-radius: 20px;
+  margin-top:0px;
+  margin-right:5px;"
+}
+
 a{
-  color: #464646;
+  color: gray;
 }
 
 .dropped{
@@ -35,6 +39,7 @@ a{
   right: 0;
   z-index: 1000;
   float: left;
+  width:250px;
   font-size: 16px !important;
   text-align: left;
   list-style: none;
@@ -43,7 +48,6 @@ a{
   background-clip: padding-box;
   border: 1px solid #ccc;
   border: 1px solid rgba(0,0,0,.15);
-  border-radius: 4px;
   -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
   box-shadow: 0 5px 12px #888888;
 
@@ -65,9 +69,13 @@ div{
   display: block ;
 }
 
+li > a{
+  color:black !important;
+  font-size: 16px !important;
+}
 li > a:hover{
   background:#337ab7 !important;
-  color: white;
+  color: white !important;
 }
 
 .navfixed{

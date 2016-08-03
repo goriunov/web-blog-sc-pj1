@@ -12,16 +12,18 @@
 
     <!--Buttons to load new content or that can not load new content-->
   <footer style="text-align: center">
-    <button [disabled]="articles.length == 0"
-            *ngIf="id == 'all' || id==null"
-            class = "btn btn-default"
-            (click)="onNext()">Get next 12 articles</button>
-<!--Can not load Disable filter -->
-    <button disabled
-            *ngIf="filter && id !='all' "
-            class = "btn btn-default">You can not load new content with filter on</button>
-    <a [routerLink]="['../']" *ngIf="filter && id !='all' " class = "btn btn-default">Disable filter</a>
 
+    <div *ngIf="id == 'all' || id==null" class="toolt">
+    <button [disabled]="articles.length == 0"
+            class = "btn btn-primary "
+            (click)="onNext()">@</button>
+    <span class="tooltipt">Next articles</span>
+    </div>
+      <!--Can not load Disable filter -->
+    <div *ngIf="filter && id !='all' " class="toolt">
+    <a [routerLink]="['../']"  class = "btn btn-danger">X</a>
+      <span class="tooltipt">Disable filter</span>
+    </div>
   </footer>
 
   </div>
