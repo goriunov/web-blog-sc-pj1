@@ -1,7 +1,10 @@
 <!--ALL FORM INPUTS FOR ADD AND  EDIT -->
 
 <div class="col-sm-10 col-sm-offset-1">
+  <div *ngIf="auth">
+
   <form [formGroup]="myForm" >
+
     <div *ngIf="shadow">
     <!--Head of article-->
     <fieldset class="form-group">
@@ -60,9 +63,17 @@
               (click)="onSelect(selector)">+ {{selector}}</button>
         </div>
     </fieldset>
+    </div>
 
-<!-- IMPORTANT CKEDITOR DO NOT TOUCH THIS PART OTHER WISE WILL LOOSE CK EDITOR -->
+
+
+
+
+
+  </form>
+
   </div>
+  <!-- IMPORTANT CKEDITOR DO NOT TOUCH THIS PART OTHER WISE WILL LOOSE CK EDITOR -->
     <fieldset class="form-group">
       <label > Article</label>
       <textarea
@@ -72,18 +83,19 @@
     </fieldset>
 
 
-      <button
-              type="button"
-              [disabled]='!myForm.valid'
-              (click)="onSubmit()"
-              class="btn btn-primary">{{id ? 'Save' : 'Create article'}}</button>
+    <button
+      *ngIf="auth"
+      type="button"
+      [disabled]='!myForm.valid'
+      (click)="onSubmit()"
+      class="btn btn-primary">{{id ? 'Save' : 'Create article'}}</button>
 
-      <button
-              class="btn btn-danger"
-              type="button"
-              (click)="onCancel()">Cancel</button>
+    <button
+      *ngIf="auth"
+      class="btn btn-danger"
+      type="button"
+      (click)="onCancel()">Cancel</button>
 
-
-  </form>
 </div>
+
 

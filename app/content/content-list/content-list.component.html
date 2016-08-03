@@ -1,6 +1,6 @@
 <div  class="media  col-xs-12 onhover" *ngIf = "article">
 <!--IMAGE ON ALL CONTENT PAGE-->
-  <a (click)="some ? some=false : some = true">
+  <a (click)="onOpen()">
     <div class="row">
       <div class="spacing ">
         <div class="imgs" >
@@ -11,7 +11,7 @@
 
         <div >
             <small *ngFor="let section of article.sections"> {{section}} </small>
-            <h2 class="media-heading">{{article.header}} <small>| {{article.authorName}}</small></h2>
+            <h3 class="media-heading">{{article.header}} <small>| {{article.authorName}}</small></h3>
               <strong>Description:</strong><br>
               <strong>"</strong>
               <em> {{article.description}} </em>
@@ -22,8 +22,8 @@
         <div class="col-xs-12" *ngIf="some" >
             <p [innerHtml]="article.article"></p>
             <br>
-            <a style="margin-bottom: 10px;" class="btn btn-default" [routerLink]="['/edit' , index]">Edit</a>
-            <button style="margin-bottom: 10px;" class="btn btn-default" (click)="onDelete()">Delete</button>
+            <a style="margin-bottom: 10px;" class="btn btn-default" [routerLink]="['/edit' , index]" *ngIf="isAuthorize">Edit</a>
+            <button style="margin-bottom: 10px;" class="btn btn-default" (click)="onDelete()" *ngIf="isAuthorize">Delete</button>
         </div>
       </div>
     </a>

@@ -10,7 +10,7 @@
 
         <!--DropDown Sort menu-->
           <div class="dropdown dropped" dropDown >
-            <a role="button">Sort content by<span class="caret"></span> </a>
+            <a role="button">Sort by<span class="caret"></span> </a>
             <ul class="dropdown-menu dropdown-menu-right">
               <li><a routerLinkActive="activated"
                      [routerLink]="['content/DataBase']">DataBase</a></li>
@@ -33,9 +33,9 @@
         <div class="dropdown dropped " dropDown>
           <a  role="button">User<span class="caret"></span></a>
           <ul class="dropdown-menu pull-right">
-            <li><a routerLinkActive="activated" [routerLink]="['/create-post']">Create Post</a></li>
-            <li><a (click)="faceBookLogIn()">LogIn with FaceBook</a></li>
-            <li><a (click)="faceBookLogOut()">Log Out</a></li>
+            <li><a routerLinkActive="activated" [routerLink]="['/create-post']" *ngIf="user" >Create Post</a></li>
+            <li><a (click)="faceBookLogIn()" *ngIf="!user">LogIn with FaceBook</a></li>
+            <li><a (click)="faceBookLogOut()"  *ngIf="user" >Log Out</a></li>
           </ul>
         </div>
       </div>
