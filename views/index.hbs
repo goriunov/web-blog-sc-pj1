@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Web</title>
+  <base href="/">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script src="./ckeditor/ckeditor.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+  <app-root>
+    <div style="text-align: center">
+      <h1>Page is loading .......</h1>
+      <p style="color:red">Loading of page can take some time do not reload it  , however some browsers are not capable
+      to load this page mostly on mobiles . If after 1-2 minutes pages is not loaded try another browser</p>
+    </div>
+  </app-root>
+
+
+    <script src="vendor/es6-shim/es6-shim.js"></script>
+    <script src="vendor/reflect-metadata/Reflect.js"></script>
+    <script src="vendor/systemjs/dist/system.src.js"></script>
+    <script src="vendor/zone.js/dist/zone.js"></script>
+    <script>
+      System.import('system-config.js').then(function () {
+        System.import('main');
+      }).catch(console.error.bind(console));
+
+
+    </script>
+
+  <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCmmpzrH6q53F4b3dOu-GuQWrcexE8ajE8",
+      authDomain: "web-site-daf19.firebaseapp.com",
+      databaseURL: "https://web-site-daf19.firebaseio.com",
+    };
+    firebase.initializeApp(config);
+  </script>
+
+
+
+
+</body>
+</html>

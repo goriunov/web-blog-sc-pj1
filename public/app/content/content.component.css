@@ -1,0 +1,31 @@
+
+/*Some styles for buttons*/
+footer{
+  position: fixed;
+  right: 5px;
+  border-radius: 25px;
+}
+
+button{
+  margin-top: 10px;
+}
+a{
+  margin-top: 10px;
+}
+
+
+.tooltipt {
+  top: 10px;
+  width: 120px;
+  right: 105%;
+  border-radius: 10px;
+  display: none;
+  background-color: #262626;
+  color: whitesmoke;
+  position: absolute;
+  z-index: 1;
+}
+
+.toolt:hover .tooltipt {
+  display: inline-block;
+}

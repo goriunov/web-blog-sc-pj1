@@ -1,0 +1,101 @@
+
+/*
+Recreate navbar Bootstrap
+Change some css styles
+ */
+
+
+/*Using '!important' to prevent styles from bootstrap '!important'
+ is  only in this file , all others free from '!important'  */
+small{
+  font-size: 13px;
+}
+
+.displayUserImg{
+  margin-bottom: 5px;
+  float:left;
+  width:30px;
+  border-radius: 20px;
+  margin-top:0px;
+  margin-right:5px;"
+}
+
+a{
+  color: gray;
+}
+
+.dropped{
+  cursor: pointer ;
+}
+
+.dropped a{
+  padding :15px;
+  padding-top: 20px;
+  text-decoration: none;
+}
+
+.navbar-nav .open  .dropdown-menu{
+  position: absolute;
+  right: 0;
+  z-index: 1000;
+  float: left;
+  width:250px;
+  font-size: 16px !important;
+  text-align: left;
+  list-style: none;
+  background-color: white;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,.15);
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 5px 12px #888888;
+
+}
+
+div.navdiv{
+  float:right;
+  padding: 15px;
+  margin-right: 10px;
+}
+
+div{
+  display:inline-block ;
+}
+
+.activated{
+  background: #337ab7 !important;
+  color:white !important;
+  display: block ;
+}
+
+li > a{
+  color:black ;
+  font-size: 16px !important;
+}
+li > a:hover{
+  background:#337ab7 !important;
+  color: white !important;
+}
+
+.navfixed{
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  box-shadow: 5px 5px 5px #888888;
+}
+
+
+
+/*
+
+MEDIEA
+
+
+ */
+@media(max-width: 768px){
+  div.navdiv{
+    padding: 10px;
+  }
+}
