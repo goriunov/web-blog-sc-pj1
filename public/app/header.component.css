@@ -29,34 +29,36 @@ a{
 }
 
 .dropped a{
-  padding :15px;
-  padding-top: 20px;
+  padding :7.5px;
+  padding-top: 13px;
   text-decoration: none;
+  margin-right: 5px;
 }
 
+.navbar-nav{
+  margin: 0 !important;
+}
 .navbar-nav .open  .dropdown-menu{
   position: absolute;
   right: 0;
   z-index: 1000;
   float: left;
-  width:250px;
+  width:225px;
   font-size: 16px !important;
   text-align: left;
   list-style: none;
   background-color: white;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  border: 1px solid #ccc;
+  border: 1px solid gray;
   border: 1px solid rgba(0,0,0,.15);
   -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
   box-shadow: 0 5px 12px #888888;
-
 }
 
 div.navdiv{
   float:right;
-  padding: 15px;
-  margin-right: 10px;
+  padding-top: 15px;
 }
 
 div{
@@ -72,6 +74,7 @@ li > a.activated{
 li > a{
   color:black !important;
   font-size: 16px !important;
+  height: 53px;
 }
 li > a:hover{
   background:#337ab7 !important;
@@ -95,7 +98,5 @@ MEDIEA
 
  */
 @media(max-width: 768px){
-  div.navdiv{
-    padding: 10px;
-  }
+
 }

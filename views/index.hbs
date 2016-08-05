@@ -16,36 +16,39 @@
 
 </head>
 <body style="background:#d9d9d9">
-  <app-root >
-
-  </app-root>
-
-
-    <script src="vendor/es6-shim/es6-shim.js"></script>
-    <script src="vendor/reflect-metadata/Reflect.js"></script>
-    <script src="vendor/systemjs/dist/system.src.js"></script>
-    <script src="vendor/zone.js/dist/zone.js"></script>
-    <script>
-      System.import('system-config.js').then(function () {
-        System.import('main');
-      }).catch(console.error.bind(console));
+<app-root >
+  <div style="text-align: center; margin-top:20%;">
+    <h1 id="some">Loading...</h1>
+    <h4>Be patient loading can take some time.</h4>
+    <div>If page does not load for a long time try in other browsers.</div>
+  </div>
+</app-root>
 
 
-    </script>
-
-  <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyCmmpzrH6q53F4b3dOu-GuQWrcexE8ajE8",
-      authDomain: "web-site-daf19.firebaseapp.com",
-      databaseURL: "https://web-site-daf19.firebaseio.com",
-    };
-    firebase.initializeApp(config);
-  </script>
+<script src="vendor/es6-shim/es6-shim.js"></script>
+<script src="vendor/reflect-metadata/Reflect.js"></script>
+<script src="vendor/systemjs/dist/system.src.js"></script>
+<script src="vendor/zone.js/dist/zone.js"></script>
+<script>
+  System.import('system-config.js').then(function () {
+    System.import('main');
+  }).catch(console.error.bind(console));
 
 
+</script>
 
+<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCmmpzrH6q53F4b3dOu-GuQWrcexE8ajE8",
+    authDomain: "web-site-daf19.firebaseapp.com",
+    databaseURL: "https://web-site-daf19.firebaseio.com"
+  };
+  firebase.initializeApp(config);
+
+</script>
 
 </body>
 </html>
+
