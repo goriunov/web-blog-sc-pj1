@@ -108,8 +108,6 @@ router.post('/:id' , function(req , res , next){
 
             }else{
                 for(i = 0 ; i < oldMassive.length ; i++){
-
-
                     if(oldMassive[i].id == article.id){
                         oldMassive.splice(i, 1);
 
