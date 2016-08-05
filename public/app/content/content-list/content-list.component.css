@@ -21,6 +21,7 @@ small{
 
 .imgs{
   float:left;
+  padding-bottom: 10px;
 }
 
 img{
@@ -28,7 +29,6 @@ img{
   border: 1px solid black;
   border-radius: 5px;
   margin:10px;
-
 }
 
 .selectors{
