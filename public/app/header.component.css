@@ -63,14 +63,14 @@ div{
   display:inline-block ;
 }
 
-.activated{
+li > a.activated{
   background: #337ab7 !important;
   color:white !important;
   display: block ;
 }
 
 li > a{
-  color:black ;
+  color:black !important;
   font-size: 16px !important;
 }
 li > a:hover{

@@ -2,7 +2,7 @@
 <div class="col-sm-10 col-sm-offset-1">
   <div *ngIf="auth">
     <!--Form creation-->
-  <form [formGroup]="myForm" >
+  <form [formGroup]="myForm"  @flyIn="'in'">
 
     <div *ngIf="shadow">
     <!--Head of article-->
@@ -35,7 +35,7 @@
              #img
              (keyup)="0">
 
-      <img [src]="img.value"
+      <img @animateImg="'img'" [src]="img.value"
            alt="Picture not found" *ngIf="img.value"
            onError="this.src = 'http://www.blingyourband.com/skin/frontend/blingyourband/blingyourbands/images/no-available-image.png'">
 
@@ -52,7 +52,7 @@
            <input  class="btn btn-danger"
                    (click)="onUnSelect(i)"
                    formControlName="{{i}}"
-                   readonly="readonly">
+                   readonly="readonly" >
 
          </span></div><br>
 
