@@ -1,4 +1,7 @@
 /*Styles*/
+div{
+  color: darkgray;
+}
 img{
   margin:10px;
   width: 400px;
