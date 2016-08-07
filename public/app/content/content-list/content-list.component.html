@@ -1,4 +1,4 @@
-<div @flyIn="'in'" class="media  col-xs-12 onhover" *ngIf = "article" [ngClass]="addStyle ? 'opened': ''">
+<div @flyIn="'in'" class="media  col-xs-12  onhover" *ngIf = "article" [ngClass]="addStyle ? 'opened': ''">
 <!--Content-->
   <a (click)="onOpen()"  role="button" data-toggle="collapse" href="#id{{index}}" aria-expanded="false" [attr.aria-controls]="'id'+index">
     <!--MAin part -->
@@ -12,7 +12,7 @@
         </div>
         <!--Descriptions and sections -->
         <div >
-            <small *ngFor="let section of article.sections"> {{section}} </small>
+            <small *ngFor="let section of article.sections"><em> {{section}} </em></small>
             <h3 class="media-heading">{{article.header}} <small>| {{article.authorName}}</small></h3>
               <strong>Description:</strong><br>
               <strong>"</strong>

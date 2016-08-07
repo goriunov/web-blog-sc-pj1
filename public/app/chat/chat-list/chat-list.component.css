@@ -3,6 +3,7 @@
   font-size: 13px;
   margin: 2px;
   padding: 5px;
+  overflow: hidden;
 }
 .panel{
   margin-bottom: 4px;
@@ -14,3 +15,4 @@
   overflow: hidden;
   font-size: 11px;
 }
+

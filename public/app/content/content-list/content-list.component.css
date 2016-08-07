@@ -1,14 +1,16 @@
 /*Styles page*/
 .opened{
-  background: white;
+  /*background: white;*/
   cursor: pointer;
-  box-shadow: 6px 6px 6px gray;
+  /*box-shadow: 6px 6px 6px gray;*/
 }
-
+div{
+  color: darkgray;
+}
 .media{
   margin-top: 30px;
-  background: white;
-  box-shadow: 3px 3px 3px gray;
+  /*background: white;*/
+  /*box-shadow: 3px 3px 3px gray;*/
 }
 
 small{
@@ -26,8 +28,8 @@ small{
 
 img{
   width: 250px;
-  border: 1px solid black;
-  border-radius: 5px;
+  /*border: 1px solid black;*/
+  border-radius: 20px;
   margin:10px;
 }
 
@@ -41,10 +43,10 @@ a{
   margin-top: 5px;
 }
 .onhover:hover{
-  background: #f2f2f2;
+  background:#222;
   cursor: pointer;
-  box-shadow: 5px 5px 5px gray;
-  opacity: 1;
+  /*box-shadow: 5px 5px 5px gray;*/
+  /*opacity: 1;*/
 
 }
 
