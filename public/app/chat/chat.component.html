@@ -10,7 +10,7 @@
     </div>
 
     <div (keydown)="pressEnter($event)" *ngIf="isAutorized">
-      <input class="form-control" type="text" placeholder="Message" [(ngModel)]="messageContent" maxlength="10">
+      <input class="form-control" type="text" placeholder="Message" [(ngModel)]="messageContent" maxlength="100">
       <button
         [disabled]="messageContent.length < 1"
         type="submit"
