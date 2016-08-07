@@ -1,4 +1,6 @@
 .panel-body{
+  background:  #333333;
+  color:lightgrey;
   width: 240px;
   font-size: 13px;
   margin: 2px;
@@ -6,12 +8,13 @@
   overflow: hidden;
 }
 .panel{
-  margin-bottom: 4px;
+
 }
 
 .footer{
-  background:  #e6e6ff;
+  background:  #262626;
   padding-left: 5px;
+  color:grey;
   overflow: hidden;
   font-size: 11px;
 }

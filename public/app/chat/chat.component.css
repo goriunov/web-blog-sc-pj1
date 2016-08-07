@@ -6,6 +6,11 @@
 
 }
 
+.form-control{
+  background: #333333;
+  color: ghostwhite;
+}
+
 .header{
   padding: 10px;
   color:white;
