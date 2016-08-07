@@ -9,10 +9,8 @@ import {LocationStrategy, HashLocationStrategy} from "@angular/common";
 import {AuthService} from "./app/shared/auth.service";
 import {ChatService} from "./app/chat/chat.service";
 
-
-if (environment.production) {
   enableProdMode();
-}
+
 
 bootstrap(AppComponent , [
   APP_ROUTER_PROVIDER,

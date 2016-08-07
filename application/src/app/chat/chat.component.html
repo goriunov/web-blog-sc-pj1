@@ -11,11 +11,7 @@
 
     <div (keydown)="pressEnter($event)" *ngIf="isAutorized">
       <input class="form-control" type="text" placeholder="Message" [(ngModel)]="messageContent" maxlength="100">
-      <button
-        [disabled]="messageContent.length < 1"
-        type="submit"
-        class="btn btn-primary"
-              (click)="sendMessage()">{{messageContent.length < 1 ?'Write something': 'Send message' }}</button>
+      <button [disabled]="messageContent.length < 1" type="submit" class="btn btn-primary" (click)="sendMessage()">  {{messageContent.length < 1 ? 'Write something' : 'Send message' }} </button>
     </div>
   </div>
 </div>
