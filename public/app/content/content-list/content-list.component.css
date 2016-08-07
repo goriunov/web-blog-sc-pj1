@@ -1,0 +1,78 @@
+/*Styles page*/
+.opened{
+  /*background: white;*/
+  cursor: pointer;
+  /*box-shadow: 6px 6px 6px gray;*/
+}
+div{
+  color: darkgray;
+}
+.media{
+  margin-top: 30px;
+  /*background: white;*/
+  /*box-shadow: 3px 3px 3px gray;*/
+}
+
+small{
+  font-size: 14px;
+}
+
+.spacing{
+  margin:10px;
+}
+
+.imgs{
+  float:left;
+  padding-bottom: 10px;
+}
+
+img{
+  width: 250px;
+  /*border: 1px solid black;*/
+  border-radius: 20px;
+  margin:10px;
+}
+
+.selectors{
+  color: dimgray;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  margin-top: 5px;
+}
+.onhover:hover{
+  background:#262626;
+  cursor: pointer;
+  /*box-shadow: 5px 5px 5px gray;*/
+  /*opacity: 1;*/
+
+}
+
+button{
+float:right;
+}
+
+
+
+
+/*Media _____________-*/
+@media(min-width : 768px){
+  img{
+    width: 300px;
+  }
+}
+
+@media(max-width : 989px){
+  .imgs{
+    float:none;
+    text-align:center;
+   }
+}
+
+@media(max-width : 378px){
+  .imgs{
+    display: none;
+  }
+}

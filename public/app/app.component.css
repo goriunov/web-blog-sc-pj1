@@ -1,0 +1,10 @@
+/*Make nav-bar over all other content */
+#head{
+  position:absolute;
+  z-index: 10000;
+}
+
+footer{
+  height: 40px;
+}
+
