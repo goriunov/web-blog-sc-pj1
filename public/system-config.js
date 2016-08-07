@@ -32,6 +32,9 @@ var barrels = [
     'app/content/edit-content',
     'app/content/edit-content/single-content',
     'app/auth-user',
+    'app/messenger',
+    'app/chat',
+    'app/chat/chat-list',
 ];
 var cliSystemConfigPackages = {};
 barrels.forEach(function (barrelName) {
