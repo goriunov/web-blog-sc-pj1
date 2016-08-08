@@ -27,18 +27,13 @@ gulp.task('indexRename' , function(){
 
 //Copy dist to public in the server
 gulp.task('script' , function () {
-   gulp.src(['!'+from +'dist/index.html', from +'dist/**/*' , '!'+from+'dist/**/*.js' , '!'+from+'dist/**/*.css' , '!'+from+'dist/**/*.html'])
+    gulp.src(['!'+from +'dist/index.html', from +'dist/**/*' , '!'+from+'dist/**/*.js' , '!'+from+'dist/**/*.html'])
        .pipe(gulp.dest(to +'public/'));
     gulp.src(['!'+from +'dist/index.html', from +'dist/**/*.js' ])
         .pipe(uglify())
         .pipe(gulp.dest(to +'public/'));
     gulp.src(['!'+from +'dist/index.html', from +'dist/**/*.html' ])
-        .pipe(compressor({'remove-intertag-spaces': true,
-        'simple-bool-attr': true,
-        'compress-js': true,
-        'compress-css': true}))
-        .pipe(gulp.dest(to +'public/'));
-    gulp.src(['!'+from +'dist/index.html', from +'dist/**/*.css' ])
+        .pipe(compressor({'remove-intertag-spaces': true}))
         .pipe(gulp.dest(to +'public/'));
 });
 

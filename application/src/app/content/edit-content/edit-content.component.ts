@@ -4,7 +4,6 @@ import {ContentService} from "../content.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Subscription, Observable} from "rxjs/Rx";
 import {Content} from "../../shared/content";
-import {Control} from "@angular/common";
 import {AuthService} from "../../shared/auth.service";
 
 // Editor declared
@@ -64,10 +63,11 @@ export class EditContentComponent implements OnInit , OnDestroy {
               private activeRote : ActivatedRoute,
               private router: Router,
               private authService: AuthService) {
+    console.log('here');
     this.subscription = this.activeRote.params.subscribe(
       (param: any) => {
         this.id = param['id'];
-
+        console.log(this.id);
         if(this.id != null) {
           this.shadow = false;
           this.selectedContent = this.contService.getSingleContent(+this.id);
@@ -103,6 +103,7 @@ export class EditContentComponent implements OnInit , OnDestroy {
 
   ngOnInit() {
     //Check if user sign in
+    console.log('Tebe pizda');
     var user = this.authService.currentUSer();
 
     if(user) {

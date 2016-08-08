@@ -1,10 +1,10 @@
 <!--ALL FORM INPUTS FOR ADD AND  EDIT -->
-<div class="col-sm-10 col-sm-offset-1">
+<div class="col-sm-10 col-sm-offset-1"  @flyIn="'in'"  >
   <div *ngIf="auth">
     <!--Form creation-->
-  <form [formGroup]="myForm"  @flyIn="'in'">
+  <form [formGroup]="myForm" *ngIf="shadow">
 
-    <div *ngIf="shadow">
+    <div >
     <!--Head of article-->
     <fieldset class="form-group">
       <label for="head">Header of article</label>
@@ -69,13 +69,15 @@
 
 
   <!-- IMPORTANT CKEDITOR DO NOT TOUCH THIS PART OTHER WISE WILL LOOSE CK EDITOR -->
-    <fieldset class="form-group">
-      <label > Article</label>
-      <textarea
-        class="form-control"
-        minlength="800"
-        name="editor1">{{selectedContent ? selectedContent.article : ''}}</textarea>
-    </fieldset>
+
+  <fieldset class="form-group" >
+    <label > Article</label>
+    <textarea
+      class="form-control"
+      minlength="800"
+      name="editor1">{{selectedContent ? selectedContent.article : ''}}</textarea>
+  </fieldset>
+
     {{areYouIn}}<br>
   <!--Buttons  save and cancel-->
     <button
@@ -93,5 +95,6 @@
       (click)="onCancel()">Cancel</button>
 
 </div>
+
 
 
