@@ -12,16 +12,19 @@
   <script src="addTool/ckeditor/ckeditor.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
   <!-- Latest compiled and minified CSS bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
+
   <!-- Latest compiled and minified JS bootstrap -->
   <script src="addTool/js/bootstrap.min.js"></script>
-
 </head>
+
+
 <body style="background:#333333">
 <app-root >
   <div style="text-align: center; margin-top:10%; color: grey;">
-    <h1 id="some">Loading...</h1>
+    <h1 id="loading">Loading</h1>
     <h4>Be patient loading can take some time.</h4>
     <div>If page does not load for a long time try in other browsers.</div>
     <div>Using light version of browsers can lead to crash this website on yer device , therefore strongly recommend you use full versions </div>
@@ -49,6 +52,13 @@
     databaseURL: "https://web-site-daf19.firebaseio.com"
   };
   firebase.initializeApp(config);
+
+
+  i = 0;
+  setInterval(function() {
+    i = ++i % 4;
+    $("#loading").html("Loading"+Array(i+1).join("."));
+  }, 200);
 
 </script>
 

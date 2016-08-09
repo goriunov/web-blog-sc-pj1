@@ -55,7 +55,7 @@ export class EditContentComponent implements OnInit , OnDestroy {
   shadow = true;//Do not permit load page if data is not get yet
   auth= false;//Do not permit load page if you are not authorize
   myForm : FormGroup;//actual form
-  sections : string[]= ['Networking' ,'WebDev' , 'Software', 'MobileDev' ,'DataBase'];
+  sections : string[]= ['Anime', 'Manga', 'Comics', 'Serials' ,'Films' , 'Games'];
 
 
 // Find id route from link
@@ -80,14 +80,13 @@ export class EditContentComponent implements OnInit , OnDestroy {
       })};
 
 
-// Add Sections form
+// Add Sections in form
   onSelect(section){
     (<FormArray>this.myForm.find('sections')).push(new FormControl(section , [Validators.required , atListOne]));
     this.sections.splice(this.sections.indexOf(section), 1);
   }
 
-
-//Remove sections
+//Remove sections from form
   onUnSelect(section){
     this.sections.push((<FormArray>this.myForm.find('sections')).controls[section].value);
     (<FormArray>this.myForm.find('sections')).removeAt(section);
@@ -97,7 +96,6 @@ export class EditContentComponent implements OnInit , OnDestroy {
 /// Use for transver data from editor to form
    article :string = '';
    sectionsForm : any[]= [];
-
 ///////////////
 
 
@@ -157,7 +155,7 @@ export class EditContentComponent implements OnInit , OnDestroy {
 
 // Submit  form
   onSubmit(){
-
+// Check user Auth access
     let user = this.authService.currentUSer();
     if(user) {
       //Get data from editor
@@ -186,7 +184,7 @@ export class EditContentComponent implements OnInit , OnDestroy {
           err => console.log(err));
 
 
-      } else {
+      }else{
         //save data
         var newArticle = submitingForm.value;
         this.contService.addContent(newArticle);
@@ -204,14 +202,10 @@ export class EditContentComponent implements OnInit , OnDestroy {
   }
 
 
-
 //Button cancel to navigate on another content
   onCancel(){
     this.router.navigate(['/content' ]);
   }
-
-
-
 
 // Un subscribe from observable
   ngOnDestroy(){
@@ -219,6 +213,8 @@ export class EditContentComponent implements OnInit , OnDestroy {
   }
 
 }
+
+
 
 
 //Function for Validation has some value in Sections

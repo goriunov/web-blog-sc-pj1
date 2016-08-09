@@ -1,7 +1,7 @@
 <div class="chat-place" *ngIf="messages">
   <a (click)="autoScroll()" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    <div class="header">
-      <a>Chat <span class="caret"></span></a>
+    <div class="header" [ngClass]="openChat ? 'opened' : ' '" (click)="openChat ? openChat = false : openChat = true">
+      <a>Chat<span class="caret"></span></a>
     </div>
   </a>
   <div class="collapse" id="collapseExample" >

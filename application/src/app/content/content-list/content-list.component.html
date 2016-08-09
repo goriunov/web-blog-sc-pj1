@@ -13,7 +13,7 @@
         <!--Descriptions and sections -->
         <div >
             <small *ngFor="let section of article.sections"><em> {{section}} </em></small>
-            <h3 class="media-heading">{{article.header}} <small>| {{article.authorName}}</small></h3>
+            <h3 class="media-heading"><span class="artName">{{article.header}}</span> <small>| {{article.authorName}}</small></h3>
               <strong>Description:</strong><br>
               <strong>"</strong>
               <em> {{article.description}} </em>

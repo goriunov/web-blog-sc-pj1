@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {HeaderComponent } from "./header.component";
 import {ROUTER_DIRECTIVES} from "@angular/router";
 import {ChatComponent} from "./chat/chat.component";
+import {AuthService} from "./shared/auth.service";
 
 
 @Component({
@@ -15,7 +16,7 @@ import {ChatComponent} from "./chat/chat.component";
 
 
 export class AppComponent implements OnInit{
-  constructor(){}
+  constructor(private authService: AuthService){}
 
   ngOnInit() {
 

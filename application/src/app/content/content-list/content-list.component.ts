@@ -1,6 +1,6 @@
 import { Component, OnInit , Input  , OnDestroy , trigger, state, animate, transition, style } from '@angular/core';
 import {Content} from "../../shared/content";
-import {Router, ActivatedRoute, ROUTER_DIRECTIVES} from "@angular/router";
+import {ActivatedRoute, ROUTER_DIRECTIVES} from "@angular/router";
 import {Subscription} from "rxjs/Rx";
 import {ContentService} from "../content.service";
 import {AuthService} from "../../shared/auth.service";
@@ -64,7 +64,7 @@ export class ContentListComponent implements OnInit , OnDestroy {
   onOpen(){
     this.isAuthorizeAdmin = false;
     //check if user authorize
-    var check =this.authService.currentUSer();
+    var check = this.authService.currentUSer();
     //if yes then open panel for Edit
     if(check){
       if( check.email == 'goriunovd@gmail.com'){

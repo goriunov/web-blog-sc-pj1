@@ -12,6 +12,7 @@
 
     <!--Buttons to load new content or that can not load new content-->
   <footer style="text-align: center">
+
         <div *ngIf="id == 'all' || id==null" class="toolt">
         <button [disabled]="articles ? articles.length == 0 : articles == null "
                 class = "btn btn-primary "
@@ -23,6 +24,11 @@
         <a [routerLink]="['../']"  class = "btn btn-danger">X</a>
           <span class="tooltipt">Disable filter</span>
         </div>
+      <div class="toolt2">
+        <a [routerLink]="['../']"  class = "btn btn-success rules">?</a>
+        <span class="tooltipt tip2">Read rules</span>
+      </div>
+
   </footer>
 
   </div>

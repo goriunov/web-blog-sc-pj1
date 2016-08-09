@@ -1,9 +1,29 @@
 /*Styles page*/
 .opened{
   /*background: white;*/
-  cursor: pointer;
+  /*cursor: pointer;*/
   /*box-shadow: 6px 6px 6px gray;*/
+  transition: all 0.5s;
 }
+
+
+.artName{
+  font-size: 23px;
+  transition: all 0.5s;
+  font-family: newHeadFont;
+}
+.onhover:hover .artName{
+  font-size: 26px;
+}
+
+img{
+  transition: all 0.5s;
+}
+.opened img{
+  width: 500px;
+}
+
+
 div{
   color: darkgray;
 }
@@ -42,9 +62,15 @@ a{
   color: black;
   margin-top: 5px;
 }
+
+.onhover{
+  transition: all 0.6s;
+}
+
 .onhover:hover{
   background:#262626;
   cursor: pointer;
+  border-radius: 3px;
   /*box-shadow: 5px 5px 5px gray;*/
   /*opacity: 1;*/
 
@@ -69,6 +95,26 @@ float:right;
     float:none;
     text-align:center;
    }
+  img{
+    width: 350px;
+  }
+  .opened img{
+    width: 400px;
+  }
+}
+
+
+@media(max-width : 539px){
+  .imgs{
+    float:none;
+    text-align:center;
+  }
+  img{
+    width: 245px;
+  }
+  .opened img{
+    width: 255px;
+  }
 }
 
 @media(max-width : 378px){

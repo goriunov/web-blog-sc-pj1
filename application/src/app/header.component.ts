@@ -3,6 +3,8 @@ import {DropDownDirective} from "./dropdown.directive";
 import {ROUTER_DIRECTIVES} from "@angular/router";
 import {AuthService} from "./shared/auth.service";
 
+declare var firebase:any;
+
 @Component({
   moduleId: module.id,
   selector: 'app-header',
@@ -34,6 +36,7 @@ export class HeaderComponent implements OnInit {
     if(check){
       this.userName = check.displayName;
       this.userImg = check.photoURL;
+      this.user = true;
     }else{
       this.user = false;
     }
@@ -42,18 +45,18 @@ export class HeaderComponent implements OnInit {
 
   //Check validation and give access to some button
   ngOnInit(){
-     var check = this.auth.currentUSer();
-    if(check){
-      this.user = true;
-    }else{
-      this.user = false;
-    }
+    // firebase.auth().onAuthStateChanged((user)=> {
+    //     if (user) {
+    //       this.user = true;
+    //     } else {
+    //       this.user = false;
+    //     }});
   }
+
   //click on button Login Facebook
   faceBookLogIn(){
     this.auth.faceBookIn().then(
       data =>{
-
         this.user = true;
         console.log(this.user);
       },

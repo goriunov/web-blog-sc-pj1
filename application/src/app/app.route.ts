@@ -2,12 +2,11 @@ import {provideRouter} from "@angular/router";
 import {ContentComponent} from "./content/content.component";
 import {EditContentComponent} from "./content/edit-content/edit-content.component";
 
-;
 
 export const APP_ROUTER_PROVIDER = [
   provideRouter([
     // For Load content.
-    {path: '' , redirectTo: 'content' , pathMatch: 'full'},
+    {path: '' , redirectTo: 'content'  , pathMatch:'full'},
     {path: 'content' , component: ContentComponent},
     {path: 'content/:section' , component: ContentComponent},
 

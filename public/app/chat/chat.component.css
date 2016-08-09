@@ -15,8 +15,18 @@
   padding: 10px;
   color:white;
   background: #222;
+  width: 100px;
+  transition: all 0.5s;
+}
+
+.header:hover{
   width: 280px;
 }
+
+.opened{
+  width: 280px ;
+}
+
 a{
   color:darkgray;
   text-decoration: none;

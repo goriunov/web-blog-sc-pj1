@@ -7,11 +7,32 @@ footer{
   border-radius: 25px;
 }
 
+button:hover{
+  box-shadow: 3px 3px 3px #1a1a1a;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+a:hover{
+  box-shadow: 3px 3px 3px #1a1a1a;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+
+}
+
 button{
   margin-top: 10px;
+  transition: all 0.5s;
+
 }
 a{
   margin-top: 10px;
+  transition: all 0.5s;
+
 }
 
 
@@ -28,5 +49,13 @@ a{
 }
 
 .toolt:hover .tooltipt {
+  display: inline-block;
+}
+
+.rules{
+  width: 37px;
+}
+.toolt2:hover .tip2{
+  margin-top: 40px;
   display: inline-block;
 }

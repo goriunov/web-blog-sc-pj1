@@ -11,6 +11,28 @@ small{
   font-size: 13px;
 }
 
+
+
+/*Menu animation*/
+.menu{
+  transition: all 0.5s;
+}
+
+.menu:hover{
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.sort-menu{
+  transition: all 0.3s;
+  font-family: newHeadFont;
+}
+/*finish menu animation*/
+
+
+
 .navbar-inverse{
 
 }
