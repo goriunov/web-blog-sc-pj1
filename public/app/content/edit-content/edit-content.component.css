@@ -2,6 +2,24 @@
 div{
   color: darkgray;
 }
+
+.rules{
+  display:none;
+  transition: all 0.5s;
+
+}
+.tri{
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.tri:hover {
+  color: beige;
+}
+
+.tri:hover .rules{
+  display: block;
+}
 img{
   margin:10px;
   width: 400px;

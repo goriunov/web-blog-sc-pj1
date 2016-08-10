@@ -47,7 +47,6 @@ a{
   position: absolute;
   z-index: 1;
 }
-
 .toolt:hover .tooltipt {
   display: inline-block;
 }

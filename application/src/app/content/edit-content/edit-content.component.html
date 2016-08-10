@@ -1,5 +1,6 @@
 <!--ALL FORM INPUTS FOR ADD AND  EDIT -->
 <div class="col-sm-10 col-sm-offset-1">
+
   <div *ngIf="auth">
     <!--Form creation-->
   <form [formGroup]="myForm" *ngIf="shadow">
@@ -7,7 +8,8 @@
     <div >
     <!--Head of article-->
     <fieldset class="form-group">
-      <label for="head">Header of article</label>
+      <label for="head">Header of article</label><br>
+      <small>From 5 to 60 characters</small>
       <input formControlName="header"
              id="head"
              class="form-control"
@@ -16,7 +18,8 @@
 
     <!--Description -->
     <fieldset class="form-group">
-      <label for="description">Description</label>
+      <label for="description">Description</label><br>
+      <small>From 100 to 400 characters</small>
       <textarea formControlName="description"
                 id="description"
                 class="form-control"
@@ -43,7 +46,8 @@
 
 <!--SECTIONS OF CONTENT-->
     <fieldset class="form-group">
-      <label>Selected Sections</label>
+      <label>Selected Sections</label><br>
+      <small>Must choose at least one</small>
        <div formArrayName="sections"
             class="form-control"
             style="height: auto">
@@ -77,13 +81,22 @@
       minlength="800"
       name="editor1">{{selectedContent ? selectedContent.article : ''}}</textarea>
   </fieldset>
-
+  <br>
+  <div class="tri" (click)="opened? opened = false: opened = true">Must to read
+    <div class="rules" [ngStyle]="opened ? {'display': 'block'} : {}">
+      <h3><em>3 gold rules of this website:</em></h3><br>
+      <span style="color: red">- Do not publish empty articles</span><br>
+      <span style="color: red">- Do not write text without sense</span><br>
+      <span style="color: red">- Do not flood chat</span><br><br>
+      <span style="text-align: center; color: green;">If you will not follow the rules your account will be blocked</span>
+    </div>
+  </div>
     {{areYouIn}}<br>
   <!--Buttons  save and cancel-->
     <button
       *ngIf="auth"
       type="button"
-      [disabled]='!myForm.valid'
+      [disabled]='!myForm.valid || clicked'
       (click)="onSubmit()"
       class="btn btn-primary">{{id ? 'Save' : 'Create article'}}</button>
 

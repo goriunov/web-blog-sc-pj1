@@ -25,9 +25,32 @@
           <span class="tooltipt">Disable filter</span>
         </div>
       <div class="toolt2">
-        <a [routerLink]="['../']"  class = "btn btn-success rules">?</a>
-        <span class="tooltipt tip2">Read rules</span>
+
+        <button type="button" class = "btn btn-success rules" data-toggle="modal" data-target="#myModal">?</button>
+        <span class="tooltipt tip2">Description and rules</span>
       </div>
+
+    <!-- Modal -->
+    <div class="modal fade" style="margin-top: 30px;" id="myModal" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content"  >
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Description and rules</h4>
+          </div>
+          <div class="modal-body" style="text-align: left;">
+            <h3><em>3 gold rules of this website:</em></h3><br>
+            <span style="color: red">- Do not publish empty articles</span><br>
+            <span style="color: red">- Do not write text without sense</span><br>
+            <span style="color: red">- Do not flood chat</span><br><br>
+            <span style="text-align: center; color: green;">If you will not follow the rules your account will be blocked</span>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </footer>
 

@@ -22,7 +22,8 @@ declare var CKEDITOR: any;
 
 export class EditContentComponent implements OnInit , OnDestroy {
   //Init variables
-  areYouIn = '';
+  areYouIn="";
+  clicked = false;
   private subscription: Subscription;
   private id: string; //ID of page ass well use for get data from array
   private selectedContent: Content; // actual data from array
@@ -37,7 +38,6 @@ export class EditContentComponent implements OnInit , OnDestroy {
               private activeRote : ActivatedRoute,
               private router: Router,
               private authService: AuthService) {
-    console.log('here');
     this.subscription = this.activeRote.params.subscribe(
       (param: any) => {
         this.id = param['id'];
@@ -75,7 +75,6 @@ export class EditContentComponent implements OnInit , OnDestroy {
 
   ngOnInit() {
     //Check if user sign in
-    console.log('Tebe pizda');
     var user = this.authService.currentUSer();
 
     if(user) {
@@ -130,8 +129,10 @@ export class EditContentComponent implements OnInit , OnDestroy {
 // Submit  form
   onSubmit(){
 // Check user Auth access
+
     let user = this.authService.currentUSer();
     if(user) {
+      this.clicked = true;
       //Get data from editor
       var x = CKEDITOR.instances['editor1'].getData();
       this.article = x;
@@ -170,8 +171,8 @@ export class EditContentComponent implements OnInit , OnDestroy {
           err => console.log(err));
       }
     }else{
+      this.areYouIn =' You are not authorized for saving articles';
       console.log('Not authorized');
-      this.areYouIn = 'Not authorized';
     }
   }
 
@@ -187,6 +188,7 @@ export class EditContentComponent implements OnInit , OnDestroy {
   }
 
 }
+
 
 
 
