@@ -16,32 +16,6 @@ declare var CKEDITOR: any;
   templateUrl: 'edit-content.component.html',
   styleUrls: ['edit-content.component.css'],
   directives: [REACTIVE_FORM_DIRECTIVES],
-  animations:[
-    trigger('flyIn' , [
-      state('in' , style({
-        transform: 'translateY(0)',
-        opacity: '1.0'})),
-      transition('void => *' , [
-        style({
-          transform: 'translateY(-100%)',
-          opacity: '0.1'}),
-        animate(500)
-      ]),
-      transition('* => void' , [
-        style({
-          transform: 'translateY(100%)',
-          opacity: '0.1'}),
-        animate(500)
-      ]),
-    ]),
-    trigger('animateImg' , [
-      state('img' , style({opacity: '1.0'})),
-      transition('void => *' , [
-        style({opacity: '0.1'}),
-        animate(400)
-      ])
-    ])
-  ]
 
 })
 
