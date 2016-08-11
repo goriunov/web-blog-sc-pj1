@@ -35,7 +35,7 @@
         <!-- 2 drop  down User   -->
         <div class="dropdown dropped " dropDown>
           <a (click)="checkUser()" role="button"><span class="glyphicon glyphicon-align-left menu" aria-hidden="true"></span><span class="caret"></span></a>
-          <ul class="dropdown-menu pull-right" @appear = "'in'">
+          <ul class="dropdown-menu pull-right" [@appear] = "'in'">
               <li *ngIf="user" style="margin-left: 5px;"><img class="displayUserImg"
                                                               [src]="userImg"
                                                               onError="this.src = 'http://www.blingyourband.com/skin/frontend/blingyourband/blingyourbands/images/no-available-image.png'"> {{userName}}</li>
