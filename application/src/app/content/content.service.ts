@@ -28,7 +28,7 @@ export class ContentService {
       this.start = 0;
     }
     //Actually getting content from DB
-    return this.http.get('https://it-test.herokuapp.com/data/'+ this.start)
+    return this.http.get('https://these-articles.herokuapp.com/data/'+ this.start)
       .map(response => {
        const data = response.json().obj;
         if(data != null) {
@@ -84,8 +84,10 @@ export class ContentService {
     }
     const body = JSON.stringify(article);
     const headers = new Headers({'Content-Type': 'application/json'});
-    return this.http.post('https://it-test.herokuapp.com/data/' + act , body , {headers: headers})
+    return this.http.post('https://these-articles.herokuapp.com/data/' + act , body , {headers: headers})
       .map(response => response.json());
 
   }
 }
+
+
