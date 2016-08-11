@@ -9,17 +9,12 @@ div{
 
 }
 .tri{
-  transition: all 0.5s;
+  color:red;
   cursor: pointer;
 }
 
-.tri:hover {
-  color: beige;
-}
 
-.tri:hover .rules{
-  display: block;
-}
+
 img{
   margin:10px;
   width: 400px;

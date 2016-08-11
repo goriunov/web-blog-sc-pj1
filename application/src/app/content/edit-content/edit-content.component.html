@@ -31,7 +31,8 @@
 
     <!--IMAGE WITH preview -->
     <fieldset class="form-group">
-      <label for="imgUrl">Image URL</label>
+      <label for="imgUrl">Image URL</label><br>
+      <small>Do not forget picture</small>
       <input formControlName="imgUrl"
              id="imgUrl"
              class="form-control"
@@ -82,11 +83,11 @@
       name="editor1">{{selectedContent ? selectedContent.article : ''}}</textarea>
   </fieldset>
   <br>
-  <div class="tri" (click)="opened? opened = false: opened = true">Must to read
+  <div class="tri" (click)="opened? opened = false: opened = true">Must to read<span class="caret"></span>
     <div class="rules" [ngStyle]="opened ? {'display': 'block'} : {}">
       <h3><em>3 gold rules of this website:</em></h3><br>
-      <span style="color: red">- Do not publish empty articles</span><br>
-      <span style="color: red">- Do not write text without sense</span><br>
+      <span style="color: red">- Do not publish empty/unrelated articles</span><br>
+      <span style="color: red">- Do not write article without sense</span><br>
       <span style="color: red">- Do not flood chat</span><br><br>
       <span style="text-align: center; color: green;">If you will not follow the rules your account will be blocked</span>
     </div>

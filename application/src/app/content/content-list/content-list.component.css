@@ -8,12 +8,12 @@
 
 
 .artName{
-  font-size: 23px;
+  font-size: 25px;
   transition: all 0.5s;
   font-family: newHeadFont;
 }
 .onhover:hover .artName{
-  font-size: 26px;
+  font-size: 28px;
 }
 
 img{
@@ -23,6 +23,14 @@ img{
   width: 500px;
 }
 
+div em{
+  color:#949494;
+}
+
+div p{
+  font-size: 15px;
+  font-family: "Helvetica Neue";
+}
 
 div{
   color: darkgray;

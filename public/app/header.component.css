@@ -27,7 +27,7 @@ small{
 
 .sort-menu{
   transition: all 0.3s;
-  font-family: newHeadFont;
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
 }
 /*finish menu animation*/
 
