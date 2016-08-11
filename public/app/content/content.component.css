@@ -1,40 +1,36 @@
 
 /*Some styles for buttons*/
+.images{
+  width: 200px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+
+.right_buttons{
+  margin-top: 10px;
+  transition: all 0.5s;
+}
+.right_buttons:hover{
+  box-shadow: 3px 3px 3px #1a1a1a;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+.images:hover{
+  width: 220px;
+}
+
+
 footer{
   position: fixed;
   right: 7px;
 
   border-radius: 25px;
 }
-
-button:hover{
-  box-shadow: 3px 3px 3px #1a1a1a;
-  -ms-transform: rotate(45deg); /* IE 9 */
-  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-a:hover{
-  box-shadow: 3px 3px 3px #1a1a1a;
-  -ms-transform: rotate(45deg); /* IE 9 */
-  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-
-}
-
-button{
-  margin-top: 10px;
-  transition: all 0.5s;
-
-}
-a{
-  margin-top: 10px;
-  transition: all 0.5s;
-
-}
-
 
 .tooltipt {
   top: 10px;
