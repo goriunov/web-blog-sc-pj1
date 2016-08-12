@@ -12,7 +12,6 @@ small{
 }
 
 
-
 /*Menu animation*/
 .menu{
   transition: all 0.5s;
@@ -31,11 +30,6 @@ small{
 }
 /*finish menu animation*/
 
-
-
-.navbar-inverse{
-
-}
 .displayUserImg{
   margin-bottom: 5px;
   float:left;
@@ -50,7 +44,7 @@ a{
 }
 
 .dropped{
-  cursor: pointer ;
+  cursor: pointer;
 }
 
 .dropped a{
