@@ -5,13 +5,14 @@
     <div class="row" >
       <div class="spacing ">
         <!--Image-->
-        <div class="imgs" >
+        <div class="imgs col-xs-12" [ngClass]="addStyle ? '': 'col-sm-5 '" [ngStyle] ="addStyle ? {'text-align' : 'center'} : {}">
           <img [src]="article.imgUrl"
                alt="Not loaded yet"
                onError="this.src = 'http://www.blingyourband.com/skin/frontend/blingyourband/blingyourbands/images/no-available-image.png'">
         </div>
+
         <!--Descriptions and sections -->
-        <div >
+        <div class ="col-xs-12" [ngClass]="addStyle ? '': ' col-sm-7 col-sm-offste-6 '" >
             <small *ngFor="let section of article.sections"><em> {{section}} </em></small>
             <h3 class="media-heading"><span class="artName">{{article.header}}<br></span> <small>{{article.authorName}}</small></h3>
               <strong>Description:</strong><br>
@@ -20,11 +21,12 @@
               <strong>"</strong>
           </div>
         </div>
-
-
+      <br>
+      <br>
+      <br>
       <!--Button Edit and Delete-->
         <div class="col-xs-12 collapse"  id="id{{index}}">
-            <p [innerHtml]="article.article"></p>
+            <p style="margin-top : 10px;" [innerHtml]="article.article"></p>
             <br>
             <a style="margin-bottom: 10px; color:white;" class="btn btn-primary"  [routerLink]="['/edit' , index]" *ngIf="isAuthorize">Edit</a>
 

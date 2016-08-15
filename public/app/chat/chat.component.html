@@ -1,1 +1,17 @@
-<div class="chat-place" *ngIf="messages"><a (click)="autoScroll()" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><div class="header" [ngClass]="openChat ? 'opened' : ' '" (click)="openChat ? openChat=false : openChat=true"><a>Chat<span class="caret"></span></a></div></a><div class="collapse" id="collapseExample"><div id="chat-scroll" class="chat-window"><app-chat-list *ngFor="let msg of messages" [message]="msg"></app-chat-list></div><div (keydown)="pressEnter($event)" *ngIf="isAutorized"><input class="form-control" type="text" placeholder="Message" [(ngModel)]="messageContent" maxlength="100"><button [disabled]="messageContent.length < 1" type="submit" class="btn btn-primary" (click)="sendMessage()"> {{messageContent.length < 1 ? 'Write something' : 'Send message' }} </button></div></div></div>
+<div class="chat-place" *ngIf="messages">
+  <a (click)="autoScroll()" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    <div class="header" [ngClass]="openChat ? 'opened' : ' '" (click)="openChat ? openChat = false : openChat = true">
+      <a>Chat<span class="caret"></span></a>
+    </div>
+  </a>
+  <div class="collapse" id="collapseExample" >
+    <div id="chat-scroll" class="chat-window">
+      <app-chat-list *ngFor="let msg of messages" [message]="msg"></app-chat-list>
+    </div>
+
+    <div (keydown)="pressEnter($event)" *ngIf="isAutorized">
+      <input class="form-control" type="text" placeholder="Message" [(ngModel)]="messageContent" maxlength="100">
+      <button [disabled]="messageContent.length < 1" type="submit" class="btn btn-primary" (click)="sendMessage()">  {{messageContent.length < 1 ? 'Write something' : 'Send message' }} </button>
+    </div>
+  </div>
+</div>

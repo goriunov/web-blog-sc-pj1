@@ -8,7 +8,14 @@ Change some css styles
 /*Using '!important' to prevent styles from bootstrap '!important'
  is  only in this file , all others free from '!important'  */
 small{
-  font-size: 13px;
+  font-size: 15px;
+}
+
+
+.navbar-default{
+  background: #009688;
+  border: none;
+  box-shadow: 3px 3px 3px gray;
 }
 
 
@@ -40,7 +47,7 @@ small{
 }
 
 a{
-  color: darkgrey;
+  color: white;
 }
 
 .dropped{
@@ -85,7 +92,7 @@ div{
 }
 
 li > a.activated{
-  background: #337ab7 !important;
+  background:  #009688 !important;
   color:white !important;
   display: block ;
 }
@@ -96,7 +103,7 @@ li > a{
   height: 53px;
 }
 li > a:hover{
-  background:#337ab7 !important;
+  background: #009688!important;
   color: white !important;
 }
 
@@ -105,7 +112,7 @@ li > a:hover{
   top:0;
   left:0;
   right:0;
-  /*box-shadow: 3px 3px 3px #888888;*/
+
 }
 
 

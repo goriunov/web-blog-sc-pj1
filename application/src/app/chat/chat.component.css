@@ -2,19 +2,19 @@
   position : fixed;
   right: 0px;
   bottom: 0px;
-  border: 1px solid black;
+  border: 1px solid #009688;
 
 }
 
 .form-control{
-  background: #333333;
-  color: ghostwhite;
+  background: white;
+  color: black;
 }
 
 .header{
   padding: 10px;
   color:white;
-  background: #222;
+  background: #009688;
   width: 100px;
   transition: all 0.5s;
 }
@@ -28,14 +28,14 @@
 }
 
 a{
-  color:darkgray;
+  color:white;
   text-decoration: none;
 }
 .chat-window{
   margin: 0px;
   overflow: auto;
   height: 250px;
-  background: #333333;
+  background: white;
 }
 button{
   width: 280px;

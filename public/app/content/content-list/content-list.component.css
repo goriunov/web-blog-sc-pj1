@@ -10,7 +10,7 @@
 .artName{
   font-size: 25px;
   transition: all 0.5s;
-  font-family: newHeadFont;
+  font-family: "Helvetica Neue";
 }
 .onhover:hover .artName{
   font-size: 28px;
@@ -24,7 +24,7 @@ img{
 }
 
 div em{
-  color:#949494;
+  color:#333333;
 }
 
 div p{
@@ -33,7 +33,7 @@ div p{
 }
 
 div{
-  color: darkgray;
+  color: #1a1a1a;
 }
 .media{
   margin-top: 30px;
@@ -76,10 +76,10 @@ a{
 }
 
 .onhover:hover{
-  background:#262626;
+  background:#f2f2f2;
   cursor: pointer;
   border-radius: 3px;
-  /*box-shadow: 5px 5px 5px gray;*/
+  box-shadow: 3px 3px 3px gray;
   /*opacity: 1;*/
 
 }
@@ -98,13 +98,11 @@ float:right;
   }
 }
 
+
 @media(max-width : 989px){
-  .imgs{
-    float:none;
-    text-align:center;
-   }
+
   img{
-    width: 350px;
+    width: 235px;
   }
   .opened img{
     width: 400px;
@@ -112,7 +110,21 @@ float:right;
 }
 
 
-@media(max-width : 539px){
+@media(max-width : 768px){
+  .imgs{
+    float:none;
+    text-align:center;
+  }
+  img{
+    width: 280px;
+  }
+  .opened img{
+    width: 350px;
+  }
+}
+
+
+@media(max-width : 500px){
   .imgs{
     float:none;
     text-align:center;

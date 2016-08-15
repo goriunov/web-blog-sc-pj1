@@ -1,9 +1,4 @@
 
-@font-face {
-  font-family: "newHeadFont";
-  src: url("fonts/header.TTF");
-}
-
 #floatingCirclesG{
   position:relative;
   width:144px;

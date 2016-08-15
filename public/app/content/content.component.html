@@ -1,1 +1,78 @@
-<div class="row"><div class="container-fluid"><div class="col-xs-11"><div *ngFor="let article of articles; let i=index"><app-content-list *ngIf="article != null" [article]="article" [index]="i"></app-content-list></div></div><footer style="text-align: center"><div *ngIf="id == 'all' || id==null" class="toolt"><button [disabled]="articles ? articles.length == 0 : articles== null " class="btn btn-primary right_buttons" (click)="onNext()">@</button><span class="tooltipt">Next articles</span></div><div *ngIf="filter && id !='all' " class="toolt"><a [routerLink]="['../']" class="btn btn-danger right_buttons">X</a><span class="tooltipt">Disable filter</span></div><div class="toolt2"><button type="button" class="btn btn-success rules right_buttons" data-toggle="modal" data-target="#myModal">?</button><span class="tooltipt tip2">Description and rules</span></div><div class="modal fade" style="margin-top: 30px;" id="myModal" role="dialog" aria-labelledby="myModalLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="myModalLabel">Description and rules</h4></div><div class="modal-body"><h3><em>3 gold rules of this website:</em></h3><br><span style="color: red">- Do not publish unrelated articles</span><br><span style="color: red">- Do publish trash</span><br><span style="color: red">- Do not flood chat</span><br><br><span style="text-align: center; color: green;">If you will not follow this rules your account will be blocked</span></div><h3><em>Description</em></h3><br><span> You can find all code of this website on <a href="https://github.com/goriunov/blogProjectWeb" target="_blank">GitHub</a><br> Tools used:<br><a href="https://angular.io/" target="_blank"><img class="images" src="pictures/angular.png"></a><a href="https://nodejs.org/en/" target="_blank"><img class="images" src="pictures/node_js.png"></a><br><a href="http://www.json.org/" target="_blank"><img class="images" src="pictures/json.png"></a><a href="http://www.w3schools.com/" target="_blank"><img class="images" src="pictures/htmlcssjs.png"></a><br><a href="https://firebase.google.com/" target="_blank"><img class="images" src="pictures/firebase.png"></a><a href="https://jquery.com/" target="_blank"><img class="images" src="pictures/jquery.png"></a><br><a href="http://getbootstrap.com/" target="_blank"><img class="images" src="pictures/bootstrap.png"></a><a href="https://www.typescriptlang.org/" target="_blank"><img class="images" src="pictures/typescript.png"></a><br><a href="https://github.com/" target="_blank"><img class="images" src="pictures/github.jpg"></a><a href="http://gulpjs.com/" target="_blank"><img class="images" src="pictures/gulp.png"></a><br><a href="http://google.com/" target="_blank"><img class="images" src="pictures/facebookDesk.png"></a><a style="margin-left: 5px;" href="https://www.facebook.com/" target="_blank"><img class="images" src="pictures/googleDesk.png"></a><br><strong>And some other ......</strong></span><div class="modal-footer" style="text-align: left"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div></footer></div></div>
+<div class ="row">
+  <div class="container-fluid">
+    <div class="col-xs-11">
+        <div  *ngFor="let article of articles; let i = index">
+  <!--Getting List of articles -->
+          <app-content-list
+            *ngIf="article != null"
+            [article]="article"
+            [index]="i"></app-content-list>
+        </div>
+    </div>
+
+    <!--Buttons to load new content or that can not load new content-->
+  <footer style="text-align: center">
+
+        <div *ngIf="id == 'all' || id==null" class="toolt">
+        <button [disabled]="articles ? articles.length == 0 : articles == null "
+                class = "btn btn-primary right_buttons"
+                (click)="onNext()">@</button>
+        <span class="tooltipt">Next articles</span>
+        </div>
+          <!--Can not load Disable filter -->
+        <div *ngIf="filter && id !='all' " class="toolt">
+        <a [routerLink]="['../']"  class = "btn btn-danger right_buttons">X</a>
+          <span class="tooltipt">Disable filter</span>
+        </div>
+      <div class="toolt2">
+
+        <button type="button"  class = "btn btn-success rules right_buttons" data-toggle="modal" data-target="#myModal">?</button>
+        <span class="tooltipt tip2">Description and rules</span>
+      </div>
+
+    <!-- Modal -->
+    <div class="modal fade" style="margin-top: 30px;" id="myModal" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content"  >
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Description and rules</h4>
+          </div>
+          <div class="modal-body">
+            <h3><em>3 gold rules of this website:</em></h3><br>
+            <span style="color: red">- Do not publish unrelated articles</span><br>
+            <span style="color: red">- Do publish trash</span><br>
+            <span style="color: red">- Do not flood chat</span><br><br>
+            <span style="text-align: center; color: green;">If you will not follow this rules your account will be blocked</span>
+          </div>
+          <h3><em>Description</em></h3><br>
+          <span>
+            You can find all code of this website on <a href="https://github.com/goriunov/blogProjectWeb" target="_blank">GitHub</a><br>
+            Tools used:<br>
+            <a href="https://angular.io/" target="_blank"><img class="images" src="pictures/angular.png"></a>
+            <a href="https://nodejs.org/en/" target="_blank"><img class="images" src="pictures/node_js.png"></a><br>
+            <a href="http://www.json.org/" target="_blank"><img class="images" src="pictures/json.png"></a>
+            <a href="http://www.w3schools.com/" target="_blank"><img class="images" src="pictures/htmlcssjs.png"></a><br>
+            <a href="https://firebase.google.com/" target="_blank"><img class="images" src="pictures/firebase.png"></a>
+            <a href="https://jquery.com/" target="_blank"><img class="images" src="pictures/jquery.png"></a><br>
+            <a href="http://getbootstrap.com/" target="_blank"><img class="images" src="pictures/bootstrap.png"></a>
+            <a href="https://www.typescriptlang.org/" target="_blank"><img class="images" src="pictures/typescript.png"></a><br>
+            <a href="https://github.com/" target="_blank"><img class="images" src="pictures/github.jpg"></a>
+            <a href="http://gulpjs.com/" target="_blank"><img class="images" src="pictures/gulp.png"></a><br>
+            <a href="http://google.com/" target="_blank"><img class="images" src="pictures/facebookDesk.png"></a>
+            <a style="margin-left: 5px;" href="https://www.facebook.com/" target="_blank"><img class="images" src="pictures/googleDesk.png"></a><br>
+            <strong>And some other ......</strong>
+          </span>
+          <div class="modal-footer" style="text-align: left">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  </div>
+
+
+</div>

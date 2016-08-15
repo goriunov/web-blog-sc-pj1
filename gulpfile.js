@@ -33,7 +33,6 @@ gulp.task('script' , function () {
         .pipe(uglify())
         .pipe(gulp.dest(to +'public/'));
     gulp.src(['!'+from +'dist/index.html', from +'dist/**/*.html' ])
-        .pipe(compressor({'remove-intertag-spaces': true}))
         .pipe(gulp.dest(to +'public/'));
 });
 
