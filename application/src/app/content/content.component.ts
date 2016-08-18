@@ -56,7 +56,7 @@ export class ContentComponent implements OnInit , OnDestroy{
           }
 
           //Filter function  , divide on different areas
-          if (this.articles.length > 0) {
+          if (this.articles.length > 0 ) {
             if (this.id != 'all' && this.id != null) {
               for (let i = 0; i < this.articles.length; i++) {
                 var b: number = 0;
