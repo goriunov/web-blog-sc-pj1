@@ -14,7 +14,7 @@
 
         <!--Descriptions and sections -->
         <div class ="col-xs-12" [ngClass]="addStyle ? '': ' col-sm-7 col-sm-offste-6 '" >
-            <small *ngFor="let section of article.sections"><img class="displaySectionImg" src="pictures/{{section}}.jpg"><em>{{section}}</em></small>
+            <small *ngFor="let section of article.sections"><img class="displaySectionImg" src="pictures/{{section|lowercase}}.jpg"><em>{{section}}</em></small>
             <h3 class="media-heading"><span class="artName">{{article.header}}<br></span> <small>{{article.authorName}}</small></h3>
               <strong>Description:</strong><br>
               <strong>"</strong>
