@@ -10,9 +10,9 @@
         </div>
     </div>
 
-    <!--Buttons to load new content or that can not load new content-->
+    <!--Buttons to load new content or disable filters  , descriptions-->
   <footer style="text-align: center">
-
+        <!--New content button-->
         <div *ngIf="id == 'all' || id==null" class="toolt">
         <button [disabled]="articles ? articles.length == 0 : articles == null "
                 class = "btn btn-primary right_buttons"
@@ -25,11 +25,12 @@
           <span class="tooltipt">Disable filter</span>
         </div>
       <div class="toolt2">
-
+        <!--Description and rules-->
         <button type="button"  class = "btn btn-success rules right_buttons" data-toggle="modal" data-target="#myModal">?</button>
         <span class="tooltipt tip2">Description and rules</span>
       </div>
 
+    <!--Only for description-->
     <!-- Modal -->
     <div class="modal fade" style="margin-top: 30px;" id="myModal" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
@@ -69,7 +70,6 @@
         </div>
       </div>
     </div>
-
   </footer>
 
   </div>

@@ -37,6 +37,7 @@ export class AuthService {
     });
   }
 
+  // Log in with google
   googleIn(){
     var provider = new firebase.auth.GoogleAuthProvider();
 

@@ -24,11 +24,12 @@ export class ContentService {
     if(start > 0){
       this.start  = this.start + 9;
     }
+    //Check if we want to over go article and run loop
     if(start && this.articles.length < 9){
       this.start = 0;
     }
     //Actually getting content from DB
-    return this.http.get('https://these-articles.herokuapp.com/data/'+ this.start)
+    return this.http.get('/data/'+ this.start)
       .map(response => {
        const data = response.json().obj;
         if(data != null) {
@@ -82,7 +83,7 @@ export class ContentService {
     }
     const body = JSON.stringify(article);
     const headers = new Headers({'Content-Type': 'application/json'});
-    return this.http.post('https://these-articles.herokuapp.com/data/' + act , body , {headers: headers})
+    return this.http.post('/data/' + act , body , {headers: headers})
       .map(response => response.json());
 
   }

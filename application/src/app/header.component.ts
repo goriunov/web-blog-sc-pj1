@@ -1,4 +1,4 @@
-import { Component, OnInit , trigger, state, animate, transition, style  } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import {DropDownDirective} from "./dropdown.directive";
 import {ROUTER_DIRECTIVES} from "@angular/router";
 import {AuthService} from "./shared/auth.service";
@@ -10,32 +10,29 @@ declare var firebase:any;
   selector: 'app-header',
   templateUrl: 'header.component.html',
   styleUrls: ['header.component.css'],
-  directives: [DropDownDirective , ROUTER_DIRECTIVES],
-  animations:[
-    trigger('appear' , [
-      state('in' , style({opacity:'1.0'})),
-      transition('fade => *', [
-        style({opacity:'0.1'}),
-        animate(500)
-      ])
-    ])
-  ]
+  directives: [DropDownDirective , ROUTER_DIRECTIVES]
 })
 
 
 //Working program
 export class HeaderComponent implements OnInit {
-  //Init variables
+
+  //Init service
   constructor(private auth: AuthService){}
+
+  //Init variable
   user : boolean;
   userName = '';
   userImg;
 
+  // Check if user LogIn.
   checkUser(){
     var check = this.auth.currentUSer();
     if(check){
+      //If user in get his name and avatar picture
       this.userName = check.displayName;
       this.userImg = check.photoURL;
+      //Change content in login menu on Create articles and logOut
       this.user = true;
     }else{
       this.user = false;
@@ -44,17 +41,12 @@ export class HeaderComponent implements OnInit {
   }
 
   //Check validation and give access to some button
-  ngOnInit(){
-    // firebase.auth().onAuthStateChanged((user)=> {
-    //     if (user) {
-    //       this.user = true;
-    //     } else {
-    //       this.user = false;
-    //     }});
-  }
+  ngOnInit(){}
+
 
   //click on button Login Facebook
   faceBookLogIn(){
+    //Send request to Auth service
     this.auth.faceBookIn().then(
       data =>{
         this.user = true;
@@ -72,6 +64,7 @@ export class HeaderComponent implements OnInit {
     this.user = false;
   }
 
+  //Google Log in Send request to Auth service
   googleIn(){
     this.auth.googleIn().then(
       data =>{
@@ -82,6 +75,6 @@ export class HeaderComponent implements OnInit {
         this.user = false;
       }
     );
-
   }
+
 }

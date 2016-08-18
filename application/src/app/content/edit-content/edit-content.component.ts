@@ -30,7 +30,7 @@ export class EditContentComponent implements OnInit , OnDestroy {
   shadow = true;//Do not permit load page if data is not get yet
   auth= false;//Do not permit load page if you are not authorize
   myForm : FormGroup;//actual form
-  sections : string[]= ['Technology' ,'Anime' ,'Comics' ,'Serials' ,'Films' ,'Games' , 'Other'];
+  sections : string[]= ['Technology' , 'Programming ','Anime' ,'Comics' ,'Serials' ,'Films' ,'Games' , 'Other'];
 
 
 // Find id route from link

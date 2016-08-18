@@ -1,4 +1,4 @@
-
+//New module content from angular 2 RC 5
 import {NgModule, provide} from "@angular/core";
 import {AppComponent} from "./app.component";
 import {BrowserModule} from "@angular/platform-browser";

@@ -6,14 +6,15 @@
       <div class="spacing ">
         <!--Image-->
         <div class="imgs col-xs-12" [ngClass]="addStyle ? '': 'col-sm-5 '" [ngStyle] ="addStyle ? {'text-align' : 'center'} : {}">
-          <img [src]="article.imgUrl"
+          <img class="mainImg"
+               [src]="article.imgUrl"
                alt="Not loaded yet"
                onError="this.src = 'http://www.blingyourband.com/skin/frontend/blingyourband/blingyourbands/images/no-available-image.png'">
         </div>
 
         <!--Descriptions and sections -->
         <div class ="col-xs-12" [ngClass]="addStyle ? '': ' col-sm-7 col-sm-offste-6 '" >
-            <small *ngFor="let section of article.sections"><em> {{section}} </em></small>
+            <small *ngFor="let section of article.sections"><img class="displaySectionImg" src="pictures/{{section}}.jpg"><em>{{section}}</em></small>
             <h3 class="media-heading"><span class="artName">{{article.header}}<br></span> <small>{{article.authorName}}</small></h3>
               <strong>Description:</strong><br>
               <strong>"</strong>
@@ -24,7 +25,7 @@
       <br>
       <br>
       <br>
-      <!--Button Edit and Delete-->
+      <!--Buttons Edit and Delete-->
         <div class="col-xs-12 collapse"  id="id{{index}}">
             <p style="margin-top : 10px;" [innerHtml]="article.article"></p>
             <br>

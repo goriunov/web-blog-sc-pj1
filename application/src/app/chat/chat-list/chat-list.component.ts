@@ -8,6 +8,7 @@ import {Message} from "../../shared/message";
   styleUrls: ['chat-list.component.css']
 })
 export class ChatListComponent implements OnInit{
+  //inputs forom top component ChatComponent
   @Input() message : Message;
   @Input() index :number;
   @Input() userEmail : string;

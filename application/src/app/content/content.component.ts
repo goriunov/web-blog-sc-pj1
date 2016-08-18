@@ -80,7 +80,7 @@ export class ContentComponent implements OnInit , OnDestroy{
     this.counter = 1;
   }
 
-  //Change page ps change content
+  //Change page if we have enough articles
   onNext(){
     this.ngOnInit(10);
   }

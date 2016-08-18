@@ -1,14 +1,19 @@
+
+<!--Check if you have messages-->
 <div class="chat-place" *ngIf="messages != null">
+  <!--Open chat -->
   <a (click)="autoScroll()" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
     <div class="header" [ngClass]="openChat ? 'opened' : ' '" (click)="openChat ? openChat = false : openChat = true">
       <a><em>Chatting</em><span class="caret"></span></a>
     </div>
   </a>
+
+  <!--window of chat with messages -->
   <div class="collapse" id="collapseExample" >
     <div id="chat-scroll" class="chat-window">
         <app-chat-list *ngFor="let msg of messages; let i = index" [index] = "i" [userEmail]="userEmail" [message]="msg"></app-chat-list>
     </div>
-
+  <!--Input and button only of you are log in-->
     <div (keydown)="pressEnter($event)" *ngIf="isAutorized">
       <input class="form-control" type="text" placeholder="Message" [(ngModel)]="messageContent" maxlength="100">
       <button [disabled]="messageContent.length < 1" type="submit" class="btn btn-primary" (click)="sendMessage()">  {{messageContent.length < 1 ? 'Write something' : 'Send message' }} </button>

@@ -5,9 +5,10 @@ declare var firebase:any;
 export class ChatService{
   messages: Message[] = [];
   changedMessages = new EventEmitter();
-
+  //Chat send message to the Database
   writeMessage(message: Message){
       this.messages.push(message);
+    //Delete messages if more then 9 messages
     if(this.messages.length > 10){
       this.messages.splice(0, 1);
       firebase.database().ref('messages').set(this.messages);
@@ -17,6 +18,7 @@ export class ChatService{
 
   }
 
+  //Get messages from Database
   getMessagesOnInit(){
 
    firebase.database().ref('messages').on('value' , (snapshot)=>{
@@ -27,16 +29,10 @@ export class ChatService{
      }
      this.changedMessages.emit(this.messages);
    });
-   //   .then(
-   //   data => {
-   //     this.messages = data.val();
-   //     this.changedMessages.emit(this.messages);
-   //   },
-   //   error => console.log(error)
-   // );
-
   }
 
+
+  //Check if user log in
   getCurrentUser(){
     var user = firebase.auth().currentUser;
 
