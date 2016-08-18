@@ -25,7 +25,7 @@ export class ContentService {
       this.start  = this.start + 9;
     }
     //Check if we want to over go article and run loop
-    if(start && this.articles.length < 9){
+    if(start != 0 && this.articles.length < 9){
       this.start = 0;
     }
     //Actually getting content from DB
