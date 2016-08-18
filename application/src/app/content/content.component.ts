@@ -34,10 +34,9 @@ export class ContentComponent implements OnInit , OnDestroy{
       (param : any) => {
         this.id = param['section'];
         this.filter = this.id;//does not work this function
-        console.log(this.filter);
         console.log(param);
         if(this.counter !=0) {
-          this.ngOnInit(0);
+          this.ngOnInit();
         }
       }
     );

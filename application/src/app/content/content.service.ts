@@ -22,9 +22,9 @@ export class ContentService {
   // Get data from Data Base Fire base
   getContentfromDB(start?:number){
     if(start > 0){
-      this.start  = this.start + 10;
+      this.start  = this.start + 9;
     }
-    if(this.articles.length < 9){
+    if(start && this.articles.length < 9){
       this.start = 0;
     }
     //Actually getting content from DB
@@ -33,8 +33,6 @@ export class ContentService {
        const data = response.json().obj;
         if(data != null) {
           this.articles = data;
-          console.log(this.articles.length);
-
         }
         return this.articles;
       });
