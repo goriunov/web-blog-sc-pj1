@@ -52,10 +52,10 @@
                                                                 src="pictures/google.png">Login with Google</a>
                 <li><a (click)="faceBookLogOut()" *ngIf="user" class="sort-menu">Log Out</a></li>
                 <li *ngIf="!user" role="separator" class="divider"></li>
-                <li *ngIf="!user" style="margin-left:5px">After log in you can :</li>
-                <li *ngIf="!user" style="margin-left:20px">  - Create your articles</li>
-                <li *ngIf="!user" style="margin-left:20px">  - Edit your articles</li>
-                <li *ngIf="!user" style="margin-left:20px">  - Use chat</li>
+                <li *ngIf="!user" style="padding-left:5px; background: whitesmoke">After log in you can :</li>
+                <li *ngIf="!user" style="padding-left:20px; background: whitesmoke">  - Create your articles</li>
+                <li *ngIf="!user" style="padding-left:20px; background: whitesmoke">  - Edit your articles</li>
+                <li *ngIf="!user" style="padding-left:20px; background: whitesmoke">  - Use chat</li>
             </ul>
           </div>
         </div>
