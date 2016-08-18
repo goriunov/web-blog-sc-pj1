@@ -1,0 +1,49 @@
+/*CSS for simple stylings*/
+.chat-place{
+  box-shadow: -3px -3px 5px gray;
+  position : fixed;
+  right: 0px;
+  bottom: 0px;
+  border: 1px solid #3F51B5;
+
+}
+
+.form-control{
+  background: white;
+  color: black;
+}
+
+.header{
+  padding: 10px;
+  color:white;
+  background: #3F51B5;
+  width: 100px;
+  transition: all 0.5s;
+}
+
+.header:hover{
+  width: 280px;
+}
+
+.opened{
+  width: 280px ;
+}
+
+a{
+  color:white;
+  text-decoration: none;
+}
+.chat-window{
+  margin: 0px;
+  overflow: auto;
+  height: 250px;
+  background: white;
+}
+button{
+  width: 280px;
+  margin-top: 2px;
+}
+
+button:disabled{
+  opacity: 1.0;
+}
