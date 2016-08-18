@@ -24,7 +24,7 @@ export class ContentService {
     if(start > 0){
       this.start  = this.start + 10;
     }
-    if(this.articles.length < 11){
+    if(this.articles.length < 9){
       this.start = 0;
     }
     //Actually getting content from DB

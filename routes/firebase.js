@@ -24,7 +24,7 @@ router.get('/:id' ,function (req, res, next) {
         if(snapshot.val() != null) {
             var helperMassive = [];
             var numberArticles = snapshot.val().length;
-            var content  =  numberArticles - 11 - page;
+            var content  =  numberArticles - 9 - page;
             var allContent = numberArticles - 1 - page;
             if(allContent < 1){
                 allContent = 1
@@ -32,7 +32,7 @@ router.get('/:id' ,function (req, res, next) {
             if(content <= 0){
                 content = 0;
             }
-            for (i = allContent; i >= content; i--) {
+            for (var i = allContent; i >= content; i--) {
                 helperMassive.push(snapshot.val()[i]);
             }
 
