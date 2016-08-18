@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit, Input  } from '@angular/core';
 import {Message} from "../../shared/message";
 
 @Component({
@@ -7,11 +7,15 @@ import {Message} from "../../shared/message";
   templateUrl: 'chat-list.component.html',
   styleUrls: ['chat-list.component.css']
 })
-export class ChatListComponent implements OnInit {
-  @Input() message = Message;
+export class ChatListComponent implements OnInit{
+  @Input() message : Message;
+  @Input() index :number;
+  @Input() userEmail : string;
+
   constructor() {}
 
   ngOnInit() {
+
   }
 
 }

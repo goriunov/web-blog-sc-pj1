@@ -1,8 +1,9 @@
 .chat-place{
+  box-shadow: -3px -3px 5px gray;
   position : fixed;
   right: 0px;
   bottom: 0px;
-  border: 1px solid #009688;
+  border: 1px solid #3F51B5;
 
 }
 
@@ -14,7 +15,7 @@
 .header{
   padding: 10px;
   color:white;
-  background: #009688;
+  background: #3F51B5;
   width: 100px;
   transition: all 0.5s;
 }

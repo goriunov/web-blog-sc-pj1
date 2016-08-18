@@ -9,7 +9,7 @@
 
 .right_buttons{
   margin-top: 10px;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 .right_buttons:hover{
   box-shadow: 3px 3px 3px #1a1a1a;

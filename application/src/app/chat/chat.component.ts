@@ -14,17 +14,21 @@ export class ChatComponent implements OnInit {
   messages : Message[];
   message : Message;
   messageContent = '';
+  userEmail = '';
   isAutorized= false;
+
   constructor(private chatService: ChatService) {}
 
   sendMessage(){
     let user = this.chatService.getCurrentUser();
     if(user) {
-      this.message = new Message(user.displayName, this.messageContent);
+      this.userEmail = user.email;
+      this.message = new Message(user.displayName, this.messageContent , user.email);
       this.chatService.writeMessage(this.message);
       this.messageContent = '';
       this.autoScroll();
     }else{
+      this.userEmail = '';
       console.log('Not authorized');
       this.messageContent = 'Not authorized'
     }
@@ -34,12 +38,20 @@ export class ChatComponent implements OnInit {
     let user =this.chatService.getCurrentUser();
     if(user){
       this.isAutorized = true;
+      this.userEmail = user.email;
+    }else{
+      this.userEmail = '';
+      this.isAutorized = false;
     }
     this.chatService.getMessagesOnInit();
     this.chatService.changedMessages.subscribe(
       result => {
-        this.messages = result;
-        this.autoScroll();
+        if(result != null) {
+          this.messages = result;
+          this.autoScroll();
+        }else{
+          this.messages = [];
+        }
       }
     );
   }
@@ -48,8 +60,10 @@ export class ChatComponent implements OnInit {
     let user = this.chatService.getCurrentUser();
     if(user){
       this.isAutorized = true;
+      this.userEmail = user.email;
     }else{
       this.isAutorized = false;
+      this.userEmail = '';
     }
     setTimeout(function(){
       let el = document.getElementById('chat-scroll');

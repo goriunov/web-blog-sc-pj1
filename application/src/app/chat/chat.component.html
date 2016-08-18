@@ -1,12 +1,12 @@
-<div class="chat-place" *ngIf="messages">
+<div class="chat-place" *ngIf="messages != null">
   <a (click)="autoScroll()" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
     <div class="header" [ngClass]="openChat ? 'opened' : ' '" (click)="openChat ? openChat = false : openChat = true">
-      <a>Chat<span class="caret"></span></a>
+      <a><em>Chatting</em><span class="caret"></span></a>
     </div>
   </a>
   <div class="collapse" id="collapseExample" >
     <div id="chat-scroll" class="chat-window">
-      <app-chat-list *ngFor="let msg of messages" [message]="msg"></app-chat-list>
+        <app-chat-list *ngFor="let msg of messages; let i = index" [index] = "i" [userEmail]="userEmail" [message]="msg"></app-chat-list>
     </div>
 
     <div (keydown)="pressEnter($event)" *ngIf="isAutorized">

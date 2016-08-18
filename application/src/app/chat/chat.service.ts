@@ -20,7 +20,11 @@ export class ChatService{
   getMessagesOnInit(){
 
    firebase.database().ref('messages').on('value' , (snapshot)=>{
-     this.messages = snapshot.val();
+     if(snapshot.val() != null) {
+       this.messages = snapshot.val();
+     }else{
+       this.messages = [];
+     }
      this.changedMessages.emit(this.messages);
    });
    //   .then(
@@ -35,6 +39,7 @@ export class ChatService{
 
   getCurrentUser(){
     var user = firebase.auth().currentUser;
+
     return user;
 
   }

@@ -13,7 +13,7 @@ small{
 
 
 .navbar-default{
-  background: #009688;
+  background: #3F51B5;
   border: none;
   box-shadow: 3px 3px 3px gray;
 }
@@ -21,7 +21,7 @@ small{
 
 /*Menu animation*/
 .menu{
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 
 .menu:hover{
@@ -64,6 +64,7 @@ a{
 .navbar-nav{
   margin: 0 !important;
 }
+
 .navbar-nav .open  .dropdown-menu{
   position: absolute;
   right: 0;
@@ -81,6 +82,14 @@ a{
   -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
   box-shadow: 0 5px 12px #888888;
 }
+.navbar-default >.navbar-nav>.open > a:hover{
+  background: #303F9F;
+  color:white;
+}
+.navbar-default >.navbar-nav>.open > a{
+  background: #303F9F;
+  color:white;
+}
 
 div.navdiv{
   float:right;
@@ -92,7 +101,7 @@ div{
 }
 
 li > a.activated{
-  background:  #009688 !important;
+  background:  #EC407A!important;
   color:white !important;
   display: block ;
 }
@@ -103,7 +112,7 @@ li > a{
   height: 53px;
 }
 li > a:hover{
-  background: #009688!important;
+  background: #EC407A!important;
   color: white !important;
 }
 

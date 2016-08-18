@@ -1,5 +1,4 @@
 .panel-body{
-  background: white;
   color:black;
   width: 240px;
   font-size: 13px;
@@ -12,7 +11,7 @@
 }
 
 .footer{
-  background:  #E0F2F1;
+  background: #E0F2F1;
   padding-left: 5px;
   color:black;
   overflow: hidden;

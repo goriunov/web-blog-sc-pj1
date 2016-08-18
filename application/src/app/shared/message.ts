@@ -1,3 +1,3 @@
 export class Message {
-  constructor(private name: string , private content: string){}
+  constructor(public name: string , public content: string , public email?: string){}
 }

@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "gulp": "gulp clean && gulp script &&  gulp indexRename && gulp addTool && gulp watch"
+    "gulp": "gulp clean && gulp script &&  gulp indexRename && gulp addTool ",
+    "build":" cd application && ng build -w",
+    "prod" : " cd application && ng build -prod "
   },
   "dependencies": {
     "body-parser": "~1.13.2",
