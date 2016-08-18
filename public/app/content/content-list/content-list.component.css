@@ -1,9 +1,12 @@
 /*Styles page*/
 .opened{
-  border-left: 8px solid #E91E63;
+  border-left: 8px solid #E91E63 !important;
   transition: all 0.5s;
 }
 
+.opened > .artName{
+  color: #EC407A;
+}
 
 .artName{
   font-size: 25px;
@@ -50,6 +53,7 @@ div{
   color: #1a1a1a;
 }
 .media{
+  border-left: 8px solid #3F51B5;
   margin-top: 30px;
   /*background: white;*/
   /*box-shadow: 3px 3px 3px gray;*/
