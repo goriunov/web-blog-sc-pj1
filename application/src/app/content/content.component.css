@@ -2,7 +2,6 @@
 /*Some styles for buttons*/
 .images{
   width: 200px;
-  transition: all 0.3s;
   cursor: pointer;
 }
 
@@ -21,9 +20,6 @@
 }
 
 
-.images:hover{
-  width: 220px;
-}
 
 
 footer{
