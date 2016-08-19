@@ -14,6 +14,6 @@
 .login:hover{
   cursor: pointer;
 }
-.family{
-  font-family: 'Trebuchet', 'Trebuchet', 'Trebuchet';
+.family img{
+  width: 100px;
 }

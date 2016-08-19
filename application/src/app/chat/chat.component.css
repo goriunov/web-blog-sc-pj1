@@ -43,4 +43,9 @@ a{
 button{
   width: 280px;
   margin-top: 2px;
+
+}
+
+button:disabled{
+  opacity:1.0;
 }

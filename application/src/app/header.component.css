@@ -10,6 +10,20 @@ Change some css styles
 small{
   font-size: 15px;
 }
+
+.logo{
+  position: fixed;
+  top:12px;
+  left: 0px
+}
+.brand {
+  width: 40px;
+
+}
+.brand:hover{
+  cursor: pointer;
+}
+
 .main-border{
   position: fixed;
   top:0;
