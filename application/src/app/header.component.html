@@ -53,24 +53,24 @@
 
                 <li *ngIf="user" role="separator" class="divider"></li>
 
-                <li style="background: whitesmoke">
+
+                <li>
                   <a routerLinkActive="activated" [routerLink]="['/create-post']" *ngIf="user"  class="sort-menu">Create Post</a>
                 </li>
 
                 <li style="background: whitesmoke">
                   <a (click)="faceBookLogIn()" *ngIf="!user" class="sort-menu">
-                    <img class="displayUserImg" src="pictures/facebook.png">Login with Facebook
+                    <img class="displayUserImg" src="pictures/facebook.png">Sign in with Facebook
                   </a>
                 </li>
 
                 <li>
-                  <a (click)="googleIn()" *ngIf="!user" class="sort-menu"><img class="displayUserImg" src="pictures/google.png">Login with Google</a>
+                  <a (click)="googleIn()" *ngIf="!user" class="sort-menu"><img class="displayUserImg" src="pictures/google.png">Sign in with Google</a>
                 </li>
 
-                <li>
+                <li style="background: whitesmoke">
                   <a (click)="faceBookLogOut()" *ngIf="user" class="sort-menu">Log Out</a>
                 </li>
-
 
                 <!-- Description befor you log in -->
                 <li *ngIf="!user" role="separator" class="divider"></li>
@@ -78,6 +78,11 @@
                 <li *ngIf="!user" style="padding-left:20px; background: whitesmoke">  - Create your articles</li>
                 <li *ngIf="!user" style="padding-left:20px; background: whitesmoke">  - Edit your articles</li>
                 <li *ngIf="!user" style="padding-left:20px; background: whitesmoke">  - Use chat</li>
+
+              <li role="separator" class="divider"></li>
+              <li>
+                <a [routerLink]="['/']" class="sort-menu">Home page</a>
+              </li>
             </ul>
           </div>
         </div>

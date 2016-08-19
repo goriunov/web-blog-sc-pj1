@@ -1,11 +1,12 @@
 import {RouterModule, Routes} from "@angular/router";
 import {ContentComponent} from "./content/content.component";
 import {EditContentComponent} from "./content/edit-content/edit-content.component";
+import {FirstPageComponent} from "./firspage/firstpage.component";
 
 //New routes from Angular 2 RC 5
 export const APP_ROUTER_PROVIDER: Routes = [
     // For Load content.
-    {path: '' , redirectTo: 'content'  , pathMatch:'full'},
+    {path: '' , component: FirstPageComponent},
     {path: 'content' , component: ContentComponent},
     {path: 'content/:section' , component: ContentComponent},
 

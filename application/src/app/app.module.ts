@@ -11,9 +11,10 @@ import {FormsModule} from "@angular/forms";
 import {ContentComponent} from "./content/content.component";
 import {EditContentComponent} from "./content/edit-content/edit-content.component";
 import {LocationStrategy, HashLocationStrategy} from "@angular/common";
+import {FirstPageComponent} from "./firspage/firstpage.component";
 
 @NgModule({
-  declarations: [AppComponent , ContentComponent , EditContentComponent],
+  declarations: [AppComponent , ContentComponent , EditContentComponent , FirstPageComponent],
   imports: [BrowserModule ,HttpModule , routers , FormsModule ],
   bootstrap: [AppComponent],
   providers: [ContentService , AuthService , ChatService ,  provide(LocationStrategy, {'useClass': HashLocationStrategy })]

@@ -1,0 +1,19 @@
+.centering{
+  text-align: center;
+}
+.login{
+  margin: 5px;
+
+}
+
+.links button{
+  width: 160px;
+  padding-left: 10px;
+}
+
+.login:hover{
+  cursor: pointer;
+}
+.family{
+  font-family: 'Trebuchet', 'Trebuchet', 'Trebuchet';
+}
