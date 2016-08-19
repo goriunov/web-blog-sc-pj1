@@ -10,12 +10,20 @@ Change some css styles
 small{
   font-size: 15px;
 }
-
+.main-border{
+  position: fixed;
+  top:0;
+  right:0;
+  left:0;
+  box-shadow: 3px 3px 3px gray;
+  border-top:10px solid  #3F51B5;
+}
 
 .navbar-default{
-  background: #3F51B5;
-  border: none;
-  box-shadow: 3px 3px 3px gray;
+
+  background: white;
+  border:none;
+  /*box-shadow: 3px 3px 3px gray;*/
 }
 
 
@@ -47,7 +55,7 @@ small{
 }
 
 a{
-  color: white;
+  color: #212121;
 }
 
 .dropped{
@@ -83,17 +91,17 @@ a{
   box-shadow: 0 5px 12px #888888;
 }
 .navbar-default >.navbar-nav>.open > a:hover{
-  background: #303F9F;
-  color:white;
+  background: whitesmoke;
+  color:#1a1a1a;
 }
 .navbar-default >.navbar-nav>.open > a{
-  background: #303F9F;
-  color:white;
+  background: whitesmoke;
+  color:#1a1a1a;
 }
 
 div.navdiv{
   float:right;
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 div{
@@ -118,11 +126,13 @@ li > a:hover{
 
 .navfixed{
   position: fixed;
-  top:0;
-  left:0;
+  top:15px;
+  /*left:0;*/
   right:0;
 
 }
+
+
 
 
 

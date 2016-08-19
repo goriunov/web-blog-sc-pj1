@@ -202,7 +202,7 @@ function atListOne(control: FormArray) :  {[s:string]:boolean}{
 
 //Does not have less then need letters
 function hasLessThen(control: FormControl):{[s:string]:boolean}{
-  if(control.value.length > 60 || control.value.length < 5 ){
+  if(control.value.length > 150 || control.value.length < 5 ){
     return {name: true};
   }
 }

@@ -8,10 +8,9 @@
 
 /*Buttons next page  , description */
 .right_buttons{
-  margin-top: 10px;
+  margin-top: 13px;
   transition: all 0.3s;
 }
-
 
 .right_buttons:hover{
   box-shadow: 3px 3px 3px #1a1a1a;
@@ -45,6 +44,7 @@ footer{
   position: absolute;
   z-index: 1;
 }
+
 .toolt:hover .tooltipt {
   display: inline-block;
 }

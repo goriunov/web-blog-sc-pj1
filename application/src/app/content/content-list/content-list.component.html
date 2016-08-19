@@ -1,6 +1,6 @@
-<div [@flyIn]="'in'" class="media  col-xs-12  onhover" *ngIf = "article" [ngClass]="addStyle ? 'opened': ''">
+<div [@flyIn]="'in'" class="media  col-xs-12  onhover " *ngIf = "article" [ngClass]="addStyle ? 'opened': ''" >
 <!--Content-->
-  <a (click)="onOpen()"  role="button" data-toggle="collapse" href="#id{{index}}" aria-expanded="false" [attr.aria-controls]="'id'+index">
+  <a (click)="onOpen()" role="button" data-toggle="collapse" href="#id{{index}}" aria-expanded="false" [attr.aria-controls]="'id'+index">
     <!--MAin part -->
     <div class="row" >
       <div class="spacing ">
@@ -35,6 +35,7 @@
 
         </div>
       </div>
+
     </a>
 
 </div>
