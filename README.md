@@ -1,5 +1,7 @@
 # Project Web-Blog.
 
+##Project was builded for learning reason, tools used: NodeJS, Firebase, Angular2, HTML5, CSS3, Bootstrap, Gulp. 
+
 ## Preporation 
 1. Clone repo.
 2. Navigate to this repo-folder.
