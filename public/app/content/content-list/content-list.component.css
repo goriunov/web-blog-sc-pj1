@@ -7,23 +7,23 @@
 
 
 .opened{
-  border-left: 5px solid #E91E63 !important;
-  transition: all 0.5s;
+  border-left: 5px solid #303F9F !important;
+  transition: all 0.2s;
 }
 
 .opened > .artName{
-  color: #EC407A;
+  color: #303F9F;
 }
 
 .artName{
   font-size: 25px;
-  transition: all 0.5s;
+  transition: all 0.2s;
   font-family: "Helvetica Neue";
 }
 
 
 .onhover:hover .artName{
-  color: #EC407A;
+  color: #303F9F;
 }
 
 .onhover{
@@ -33,7 +33,7 @@
 .onhover:hover{
   /*background:#E8EAF6;*/
   cursor: pointer;
-  border-left: 5px solid #E91E63;
+  border-left: 5px solid #303F9F;
   /*opacity: 1;*/
 
 }
@@ -41,7 +41,7 @@
 
 
 img{
-  transition: all 0.5s;
+  transition: all 0.4s;
 }
 .opened .mainImg{
   width: 500px;

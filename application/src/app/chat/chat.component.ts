@@ -15,7 +15,18 @@ export class ChatComponent implements OnInit {
   message : Message;
   messageContent = '';
   userEmail = '';
+  openChat: boolean = false;
   isAutorized= false;
+
+  onOpenChat(){
+      if(this.openChat){
+        setTimeout(()=> {
+          this.openChat = false;
+        } , 600);
+      }else{
+        this.openChat = true;
+      }
+  }
 
   constructor(private chatService: ChatService) {}
 

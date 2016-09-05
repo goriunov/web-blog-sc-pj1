@@ -18,7 +18,7 @@
   color:white;
   background: #3F51B5;
   width: 100px;
-  transition: all 0.8s;
+  transition: all 0.3s;
 }
 
 .header:hover{

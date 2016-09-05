@@ -11,3 +11,19 @@ footer{
 .container{
   margin-top:40px;
 }
+
+
+.head-board{
+  text-align: center;
+  color: white;
+  background: linear-gradient(
+    to right,
+    #283593, #3F51B5 , #283593
+  );
+  position: absolute;
+  top:0;
+  right:0;
+  left:0;
+  height: 160px;
+  padding-top: 40px;
+}

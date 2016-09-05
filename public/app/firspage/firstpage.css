@@ -1,9 +1,29 @@
 .centering{
   text-align: center;
+  margin-top: 60px;
 }
 .login{
   margin: 5px;
 
+}
+header{
+  position: absolute;
+  top:0px;
+  right:0px;
+  left:0px;
+  height: 180px;
+  background: linear-gradient(
+    to right,
+    #283593, #3F51B5 , #283593
+  );
+  color:white;
+}
+
+.btn-primary{
+  background:#3F51B5;
+}
+.bord{
+  margin-top: 90px;
 }
 
 .links button{

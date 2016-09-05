@@ -5,6 +5,7 @@ import {ContentService} from "../content/content.service";
 import {Content} from "../shared/content";
 import {ActivatedRoute, ROUTER_DIRECTIVES} from '@angular/router';
 import {Subscription} from "rxjs/Rx";
+import {NameService} from "../name.service";
 
 
 @Component({
@@ -29,7 +30,8 @@ export class ContentComponent implements OnInit , OnDestroy{
   filter: string;
   // Get  param of page and check filter in
   constructor(private contentService : ContentService ,
-              private activatedRouter: ActivatedRoute) {
+              private activatedRouter: ActivatedRoute,
+              private nameService: NameService) {
     this.subscription = this.activatedRouter.params.subscribe(
       (param : any) => {
         this.id = param['section'];
@@ -44,6 +46,7 @@ export class ContentComponent implements OnInit , OnDestroy{
 
   // Init all app
   ngOnInit(number?: number) {
+    this.nameService.changeName('Reading');
     //getting Data
     this.articles = [];
     this.contentService.getContentfromDB(number).subscribe(

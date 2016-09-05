@@ -5,6 +5,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {Subscription, Observable} from "rxjs/Rx";
 import {Content} from "../../shared/content";
 import {AuthService} from "../../shared/auth.service";
+import {NameService} from "../../name.service";
 
 // Editor declared
 
@@ -37,7 +38,8 @@ export class EditContentComponent implements OnInit , OnDestroy {
   constructor(private contService : ContentService ,
               private activeRote : ActivatedRoute,
               private router: Router,
-              private authService: AuthService) {
+              private authService: AuthService,
+              private nameService: NameService) {
     this.subscription = this.activeRote.params.subscribe(
       (param: any) => {
         this.id = param['id'];
@@ -74,8 +76,10 @@ export class EditContentComponent implements OnInit , OnDestroy {
 
 
   ngOnInit() {
+
+    this.nameService.changeName("Writing");
     //Check if user sign in
-    var user = this.authService.currentUSer();
+    var  user = this.authService.currentUSer();
 
     if(user) {
       this.auth= true;

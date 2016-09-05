@@ -12,12 +12,13 @@ import {ContentComponent} from "./content/content.component";
 import {EditContentComponent} from "./content/edit-content/edit-content.component";
 import {LocationStrategy, HashLocationStrategy} from "@angular/common";
 import {FirstPageComponent} from "./firspage/firstpage.component";
+import {NameService} from "./name.service";
 
 @NgModule({
   declarations: [AppComponent , ContentComponent , EditContentComponent , FirstPageComponent],
   imports: [BrowserModule ,HttpModule , routers , FormsModule ],
   bootstrap: [AppComponent],
-  providers: [ContentService , AuthService , ChatService ,  provide(LocationStrategy, {'useClass': HashLocationStrategy })]
+  providers: [ContentService , AuthService , ChatService ,  provide(LocationStrategy, {'useClass': HashLocationStrategy }) , NameService]
 })
 
 export class AppModule

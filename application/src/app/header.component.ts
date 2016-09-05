@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import {DropDownDirective} from "./dropdown.directive";
-import {ROUTER_DIRECTIVES} from "@angular/router";
+import {ROUTER_DIRECTIVES , Router} from "@angular/router";
 import {AuthService} from "./shared/auth.service";
 
 declare var firebase:any;
@@ -18,7 +18,7 @@ declare var firebase:any;
 export class HeaderComponent implements OnInit {
 
   //Init service
-  constructor(private auth: AuthService){}
+  constructor(private auth: AuthService , private router: Router){}
 
   //Init variable
   user : boolean;
@@ -51,6 +51,7 @@ export class HeaderComponent implements OnInit {
       data =>{
         this.user = true;
         console.log(this.user);
+        this.router.navigate(['/content']);
       },
       error=>{
         this.user = false;
@@ -70,6 +71,7 @@ export class HeaderComponent implements OnInit {
       data =>{
         this.user = true;
         console.log(this.user);
+        this.router.navigate(['/content']);
       },
       error=>{
         this.user = false;

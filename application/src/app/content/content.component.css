@@ -1,8 +1,15 @@
 
+.articles{
+  margin-top: 100px;
+}
 /*Some styles for buttons*/
 .images{
   width: 200px;
   cursor: pointer;
+}
+
+.btn-primary{
+  background:#3F51B5;
 }
 
 /*Buttons next page  , description */
@@ -50,5 +57,10 @@ footer{
 }
 .toolt2:hover .tip2{
   margin-top: 40px;
+  display: inline-block;
+}
+
+.toolt3:hover .tip3{
+  margin-top: 100px;
   display: inline-block;
 }

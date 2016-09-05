@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component , OnInit} from '@angular/core';
 import {AuthService} from "../shared/auth.service";
 import {Router} from "@angular/router";
 
@@ -9,9 +9,19 @@ import {Router} from "@angular/router";
       styleUrls: ['firstpage.css']
 })
 
-export class FirstPageComponent{
+export class FirstPageComponent implements OnInit{
   constructor(private auth: AuthService  , private router: Router){}
+  downButton: string = 'Continue without log in';
 
+  ngOnInit(){
+
+      var user = this.auth.currentUSer();
+      if (user) {
+        this.downButton = 'Continue reading';
+
+      }
+
+  }
   //click on button Login Facebook
   faceBookLogIn(){
     //Send request to Auth service

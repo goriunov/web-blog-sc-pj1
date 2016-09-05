@@ -14,7 +14,7 @@ small{
 .logo{
   position: fixed;
   top:12px;
-  left: 0px
+  left: 0;
 }
 .brand {
   width: 40px;
@@ -29,13 +29,16 @@ small{
   top:0;
   right:0;
   left:0;
-  box-shadow: 3px 3px 3px gray;
-  border-top:10px solid  #3F51B5;
+  height: 10px;
+  background: linear-gradient(
+  to right,
+  #283593, #3F51B5 , #283593
+  );
 }
 
 .navbar-default{
 
-  background: white;
+  background:rgba(255,255,255,0.5);
   border:none;
   /*box-shadow: 3px 3px 3px gray;*/
 }
@@ -64,12 +67,12 @@ small{
   float:left;
   width:30px;
   border-radius: 20px;
-  margin-top:0px;
+  margin-top:0;
   margin-right:5px;"
 }
 
 a{
-  color: #212121;
+  color: black;
 }
 
 .dropped{
@@ -109,7 +112,7 @@ a{
   color:#1a1a1a;
 }
 .navbar-default >.navbar-nav>.open > a{
-  background: whitesmoke;
+  background:rgba(255,255,255,0.5);
   color:#1a1a1a;
 }
 
@@ -123,7 +126,7 @@ div{
 }
 
 li > a.activated{
-  background:  #EC407A!important;
+  background:  #3F51B5!important;
   color:white !important;
   display: block ;
 }
@@ -134,7 +137,7 @@ li > a{
   height: 53px;
 }
 li > a:hover{
-  background: #EC407A!important;
+  background: #3F51B5!important;
   color: white !important;
 }
 

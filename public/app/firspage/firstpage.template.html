@@ -5,7 +5,7 @@
   <div class="container">
     <div class="row">
       <div class="centering col-lg-12">
-        <h1 class="family" ><img src="pictures/scribbles.png"><strong><em>ScBlog</em></strong></h1>
+        <h1 class="family" ><em>ScBlog... "?"</em></h1>
       </div>
     </div>
   </div>
@@ -26,8 +26,8 @@
         <li><p>Be kind to other people</p></li>
         <li><p>Follow this rules</p></li>
       </ul>
-      <h3>Sign in/Sign up:</h3>
-        <div class="links">
+      <h3 *ngIf="downButton != 'Continue reading'">Sign in/Sign up:</h3>
+        <div *ngIf="downButton != 'Continue reading'" class="links">
           <button class="btn btn-social-icon btn-facebook login" (click)="faceBookLogIn()">
             Sign in with Facebook
           </button>
@@ -36,6 +36,10 @@
             Sign in with Google
           </button>
         </div>
+      <div *ngIf="downButton == 'Continue reading'" class="links">
+        <a class="btn btn-primary" [routerLink]="['content']">{{downButton}}</a>
+      </div>
+
     </div>
     <div class="col-sm-4 bord">
       <h2>Interface description:</h2>
@@ -44,7 +48,7 @@
       <p>Sort by<span class="caret"></span> - enable filters (applied only on your current scope of articles).</p>
       <p><button class = "btn btn-primary ">@</button> - button to load new scope of articles (disappeared when you are sorting).</p>
       <p><a class = "btn btn-danger right_buttons">X</a> - button to disable filters (appeared when you are sorting).</p>
-      <p><button type="button"  class = "btn btn-success ">?</button> - rules and information about website.</p>
+      <p><button type="button"  class = "btn btn-info ">?</button> - rules and information about website.</p>
       <p><a class="btn btn-primary">Edit</a> - appear under only your articles after you log in.</p>
       <p><strong>Click on article to open content.</strong></p>
       <p>Click on chat in right bottom angle to open chat window.</p>
@@ -67,12 +71,12 @@
       <div class="col-sm-4 bord">
         <img class="img-circle img-responsive img-center" src="pictures/chatting.png" alt="Loading....">
         <h2>Chatting</h2>
-        <p>Chat is place where you can communicate with other people in real time . Chat available in right bottom of the screen.</p>
+        <p>Chat is a place where you can communicate with other people in real time . Chat available in right bottom of the screen.</p>
       </div>
     </div>
 
   <footer class="links" style="float:right;">
-    <a class="btn btn-default" [routerLink]="['content']">Continue</a>
+    <a class="btn btn-primary" [routerLink]="['content']">{{downButton}}</a>
   </footer>
 
 </div>

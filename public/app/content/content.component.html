@@ -1,5 +1,5 @@
 <div class ="row">
-  <div class="container-fluid">
+  <div class="container-fluid articles">
     <div class="col-xs-11">
         <div  *ngFor="let article of articles; let i = index">
   <!--Getting List of articles -->
@@ -26,9 +26,13 @@
         </div>
       <div class="toolt2">
         <!--Description and rules-->
-        <button type="button"  class = "btn btn-success rules right_buttons" data-toggle="modal" data-target="#myModal">?</button>
+        <button type="button"  class = "btn btn-info rules right_buttons" data-toggle="modal" data-target="#myModal">?</button>
         <span class="tooltipt tip2">Description and rules</span>
       </div>
+    <div class="toolt3">
+      <a [routerLink]="['/']"  class = "btn btn-success right_buttons">H</a>
+      <span class="tooltipt tip3">Home Page</span>
+    </div>
 
     <!--Only for description-->
     <!-- Modal -->
