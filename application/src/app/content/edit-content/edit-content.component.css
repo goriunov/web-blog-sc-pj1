@@ -16,6 +16,10 @@ div{
   cursor: pointer;
 }
 
+label{
+  font-size: 17px;
+}
+
 
 
 img{
@@ -32,6 +36,10 @@ input{
 
 .ng-dirty.ng-invalid{
   border:1px solid #ff1a1a;
+}
+.btn-primary{
+  background: #3F51B5;
+
 }
 
 

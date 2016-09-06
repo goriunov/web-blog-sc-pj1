@@ -1,3 +1,4 @@
+
 /*Make nav-bar over all other content */
 #head{
   position: fixed;
@@ -16,9 +17,10 @@ footer{
 .head-board{
   text-align: center;
   color: white;
+  font-family: 'Lobster', cursive;
   background: linear-gradient(
     to right,
-    #283593, #3F51B5 , #283593
+    #1A237E, #3F51B5 , #1A237E
   );
   position: absolute;
   top:0;
@@ -27,3 +29,6 @@ footer{
   height: 160px;
   padding-top: 40px;
 }
+/*.head-board h1{*/
+  /*font-family: 'Lobster', cursive;*/
+/*}*/

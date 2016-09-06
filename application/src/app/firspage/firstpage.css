@@ -6,7 +6,12 @@
   margin: 5px;
 
 }
+h2,
+h3{
+  font-family: 'Lobster', cursive;
+}
 header{
+  font-family: 'Lobster', cursive;
   position: absolute;
   top:0px;
   right:0px;
@@ -14,11 +19,14 @@ header{
   height: 180px;
   background: linear-gradient(
     to right,
-    #283593, #3F51B5 , #283593
+    #1A237E, #3F51B5 , #1A237E
   );
   color:white;
 }
 
+footer{
+  margin-top: 15px;
+}
 .btn-primary{
   background:#3F51B5;
 }

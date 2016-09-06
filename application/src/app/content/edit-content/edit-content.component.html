@@ -64,7 +64,8 @@
       <div>
         <!--Button to select-->
       <button *ngFor="let selector of sections"
-              class ="btn btn-default"
+              class ="btn btn-primary"
+              type="button"
               (click)="onSelect(selector)">+ {{selector}}</button>
         </div>
     </fieldset>

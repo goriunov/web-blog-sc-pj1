@@ -18,7 +18,7 @@
 .artName{
   font-size: 25px;
   transition: all 0.2s;
-  font-family: "Helvetica Neue";
+  font-family: 'Lobster', cursive;
 }
 
 
@@ -49,6 +49,10 @@ img{
 
 div em{
   color:#333333;
+}
+
+.description{
+  color:#616161;
 }
 
 div p{

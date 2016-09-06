@@ -18,8 +18,8 @@ import {AuthService} from "../../shared/auth.service";
               opacity: '1.0'})),
       transition('void => *' , [
        style({
-            transform: 'translateY(-100%)' ,
-            opacity: '0.1' }),
+            transform: 'translateY(-80%)' ,
+            opacity: '0.3' }),
         animate('400ms ease-in')
 
       ]),

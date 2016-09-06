@@ -24,6 +24,7 @@ export class ContentComponent implements OnInit , OnDestroy{
   helper: Content [] = []; // get data from service and help do not get error 'section undefined'
   private id: string;
   counter = 0;
+  private loadingData = true;
 
 
   private gotData = false;
@@ -36,7 +37,6 @@ export class ContentComponent implements OnInit , OnDestroy{
       (param : any) => {
         this.id = param['section'];
         this.filter = this.id;//does not work this function
-        console.log(param);
         if(this.counter !=0) {
           this.ngOnInit(0);
         }
@@ -51,12 +51,17 @@ export class ContentComponent implements OnInit , OnDestroy{
     this.articles = [];
     this.contentService.getContentfromDB(number).subscribe(
       data=> {
+        this.loadingData = true;
         this.helper = data;
         this.articles = [];
         if (this.helper != null) {
           for (let i = 0; i < this.helper.length; i++) {
             this.articles.push(this.helper[i]);
+            if(i == this.helper.length - 1){
+              this.loadingData = false;
+            }
           }
+
 
           //Filter function  , divide on different areas
           if (this.articles.length > 0 ) {
@@ -66,6 +71,7 @@ export class ContentComponent implements OnInit , OnDestroy{
                 for (let j = 0; j < this.articles[i].sections.length; j++) {
                   if (this.articles[i].sections[j] == this.id) {
                     b = b + 1;
+                    this.loadingData = false;
                   }
                 }
                 if (b < 1) {
@@ -76,6 +82,7 @@ export class ContentComponent implements OnInit , OnDestroy{
           }
         }else{
           this.articles = data;
+          this.loadingData = false;
         }
       }
 

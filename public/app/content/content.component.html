@@ -8,6 +8,19 @@
             [article]="article"
             [index]="i"></app-content-list>
         </div>
+
+      <div *ngIf="loadingData">
+        <div style="text-align: center; margin-top:10%; color: grey;">
+          <br>
+          <h4>Loading data from server...</h4><br>
+          <div class="sk-folding-cube">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!--Buttons to load new content or disable filters  , descriptions-->
@@ -41,16 +54,16 @@
         <div class="modal-content"  >
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Description and rules</h4>
+            <h2 class="modal-title" id="myModalLabel">Description and rules</h2>
           </div>
           <div class="modal-body">
-            <h3><em>Rules of this website:</em></h3><br>
+            <h3>Rules of this website:</h3><br>
             <span style="color: red">- Do not publish article which does not contain appropriate content</span><br>
             <span style="color: red">- Be kind to other people</span><br>
             <span style="color: red">- Follow this rules</span><br><br>
             <span style="text-align: center; color: green;">If you will not follow this rules your account will be blocked</span>
           </div>
-          <h3><em>Description</em></h3><br>
+          <h3>Description:</h3><br>
           <span>
             You can find all code of this website on <a href="https://github.com/goriunov/blogProjectWeb" target="_blank">GitHub</a><br>
             Tools used:<br>

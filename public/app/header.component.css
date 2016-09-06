@@ -32,13 +32,13 @@ small{
   height: 10px;
   background: linear-gradient(
   to right,
-  #283593, #3F51B5 , #283593
+  #1A237E, #3F51B5 , #1A237E
   );
 }
 
 .navbar-default{
 
-  background:rgba(255,255,255,0.5);
+  background:rgba(255,255,255,0.3);
   border:none;
   /*box-shadow: 3px 3px 3px gray;*/
 }
@@ -58,7 +58,7 @@ small{
 
 .sort-menu{
   transition: all 0.3s;
-  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  font-family: 'Courgette', cursive;
 }
 /*finish menu animation*/
 
@@ -84,6 +84,7 @@ a{
   padding-top: 13px;
   text-decoration: none;
   margin-right: 5px;
+  font-family: 'Lobster', cursive;
 }
 
 .navbar-nav{
@@ -132,6 +133,7 @@ li > a.activated{
 }
 
 li > a{
+  font-family: 'Courgette', cursive;
   color:black !important;
   font-size: 16px !important;
   height: 53px;

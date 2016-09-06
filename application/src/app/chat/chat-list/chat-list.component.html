@@ -1,7 +1,7 @@
 <!--Content one message-->
 <div style="margin: 2px;" [ngStyle] = "message.email == userEmail ? { 'border-left': '10px solid #7986CB '} : { 'border-left': '10px solid #283593'}" *ngIf = "message">
  <div class="footer">
-   <em>{{message.name}}</em> <small *ngIf="userEmail != null && userEmail != ''">({{ message.email }})</small>
+   {{message.name}} <small *ngIf="userEmail != null && userEmail != ''">({{ message.email }})</small>
  </div>
     <div class="panel-body">
       {{message.content}}

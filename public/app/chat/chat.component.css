@@ -16,7 +16,10 @@
 .header{
   padding: 10px;
   color:white;
-  background: #3F51B5;
+  background: linear-gradient(
+    to right,
+     #3F51B5 , #1A237E
+  );
   width: 100px;
   transition: all 0.3s;
 }
