@@ -29,6 +29,12 @@
 }
 
 .opened{
+  padding: 10px;
+  color:white;
+  background: linear-gradient(
+    to right,
+    #3F51B5 , #1A237E
+  );
   width: 280px ;
 }
 
