@@ -15,7 +15,7 @@
         <app-chat-list *ngFor="let msg of messages; let i = index" [index] = "i" [userEmail]="userEmail" [message]="msg"></app-chat-list>
     </div>
   <!--Input and button only of you are log in-->
-    <div (keydown)="pressEnter($event)" *ngIf="isAutorized">
+    <div (keydown)="pressEnter($event)">
       <input class="form-control" type="text" placeholder="Message" [(ngModel)]="messageContent" maxlength="100">
       <button [disabled]="messageContent.length < 1" type="submit" class="btn btn-primary" (click)="sendMessage()">  {{messageContent.length < 1 ? 'Write something' : 'Send message' }} </button>
     </div>

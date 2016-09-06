@@ -43,10 +43,13 @@ export class ChatComponent implements OnInit {
       //Auto scroll to bottom of chat
       this.autoScroll();
     }else{
+      this.userEmail ='';
+      this.message = new Message('Anonym-User', this.messageContent , 'no-email');
+      this.chatService.writeMessage(this.message);
+      this.messageContent = '';
       //do not permit send
-      this.userEmail = '';
       console.log('Not authorized');
-      this.messageContent = 'Not authorized'
+      this.autoScroll();
     }
   }
 
@@ -95,11 +98,9 @@ export class ChatComponent implements OnInit {
 
   //can send messages on Enter button
   pressEnter(event){
-    if(this.isAutorized) {
-      if (this.messageContent.length > 1) {
-        if (event.keyCode == 13) {
-          this.sendMessage();
-        }
+    if (this.messageContent.length > 1) {
+      if (event.keyCode == 13) {
+        this.sendMessage();
       }
     }
   }
