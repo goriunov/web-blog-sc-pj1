@@ -12,7 +12,6 @@ import {NameService} from "../../name.service";
 declare var CKEDITOR: any;
 
 @Component({
-  moduleId: module.id,
   selector: 'app-edit-content',
   templateUrl: 'edit-content.component.html',
   styleUrls: ['edit-content.component.css'],

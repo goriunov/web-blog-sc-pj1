@@ -1,16 +1,11 @@
-<!doctype html><html><head><meta name="msvalidate.01" content="3B90680433E424D4CCF0F680398310D4"><meta charset="utf-8"><title>Scribbles</title><base href="/"><link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"><script src="addTool/js/jquery-3.1.0.slim.min.js"></script><script src="addTool/ckeditor/ckeditor.js"></script><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="logo.png"><link rel="stylesheet" href="main.css"><!-- Latest compiled and minified CSS bootstrap --><link rel="stylesheet" href="css/bootstrap.min.css"><link rel="stylesheet" href="css/bootstrap-social.css"><!-- Latest compiled and minified JS bootstrap --><script src="addTool/js/bootstrap.min.js"></script></head><body style="background:white"><app-root><div style="text-align: center; margin-top:10%; color: grey"><br><h4>Connecting to the server...</h4><br><div class="sk-folding-cube"><div class="sk-cube1 sk-cube"></div><div class="sk-cube2 sk-cube"></div><div class="sk-cube4 sk-cube"></div><div class="sk-cube3 sk-cube"></div></div><!--<h4>Be patient loading can take some time.</h4>--><!--<div>If page does not load for a long time try in other browsers.</div>--></div></app-root><script src="vendor/es6-shim/es6-shim.js"></script><script src="vendor/reflect-metadata/Reflect.js"></script><script src="vendor/systemjs/dist/system.src.js"></script><script src="vendor/zone.js/dist/zone.js"></script><script>System.import('system-config.js').then(function () {
-    System.import('main');
-  }).catch(console.error.bind(console));</script><script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script><script>// Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCmmpzrH6q53F4b3dOu-GuQWrcexE8ajE8",
-    authDomain: "web-site-daf19.firebaseapp.com",
-    databaseURL: "https://web-site-daf19.firebaseio.com"
-  };
-  firebase.initializeApp(config);
-
-
-  i = 0;
+<!doctype html><html><head><meta charset="utf-8"><title>Application</title><base href="/"><link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"><script src="assets/addTool/js/jquery-3.1.0.slim.min.js"></script><script src="assets/addTool/ckeditor/ckeditor.js"></script><script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="logo.png"><link rel="stylesheet" href="assets/css/bootstrap.min.css"><link rel="stylesheet" href="assets/css/bootstrap-social.css"><script src="assets/addTool/js/bootstrap.min.js"></script><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="favicon.ico"></head><body><script>// Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCmmpzrH6q53F4b3dOu-GuQWrcexE8ajE8",
+      authDomain: "web-site-daf19.firebaseapp.com",
+      databaseURL: "https://web-site-daf19.firebaseio.com"
+    };
+    firebase.initializeApp(config);</script><app-root><div style="text-align: center; margin-top:10%; color: grey"><br><h4>Connecting to the server...</h4><br><div class="sk-folding-cube"><div class="sk-cube1 sk-cube"></div><div class="sk-cube2 sk-cube"></div><div class="sk-cube4 sk-cube"></div><div class="sk-cube3 sk-cube"></div></div><!--<h4>Be patient loading can take some time.</h4>--><!--<div>If page does not load for a long time try in other browsers.</div>--></div></app-root><script type="text/javascript" src="inline.js"></script><script type="text/javascript" src="styles.9910be8eafe9eabeeeaa.bundle.js"></script><script type="text/javascript" src="main.b24cf6c7a13c6affdd6b.bundle.js"></script></body><script>i = 0;
   setInterval(function() {
     i = ++i % 4;
     $("#loading").html("Loading"+Array(i+1).join("."));
-  }, 800);</script></body></html>
+  }, 800);</script></html>

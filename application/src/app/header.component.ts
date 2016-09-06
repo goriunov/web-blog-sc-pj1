@@ -6,7 +6,6 @@ import {AuthService} from "./shared/auth.service";
 declare var firebase:any;
 
 @Component({
-  moduleId: module.id,
   selector: 'app-header',
   templateUrl: 'header.component.html',
   styleUrls: ['header.component.css'],

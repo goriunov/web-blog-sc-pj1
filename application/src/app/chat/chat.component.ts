@@ -4,7 +4,6 @@ import {Message} from "../shared/message";
 import {ChatService} from "./chat.service";
 
 @Component({
-  moduleId: module.id,
   selector: 'app-chat',
   templateUrl: 'chat.component.html',
   styleUrls: ['chat.component.css'],

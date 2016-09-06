@@ -35,7 +35,6 @@ export class ChatService{
   //Check if user log in
   getCurrentUser(){
     var user = firebase.auth().currentUser;
-
     return user;
 
   }

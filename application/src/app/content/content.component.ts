@@ -9,7 +9,6 @@ import {NameService} from "../name.service";
 
 
 @Component({
-  moduleId: module.id,
   selector: 'app-content',
   templateUrl: 'content.component.html',
   styleUrls: ['content.component.css'],
@@ -49,6 +48,7 @@ export class ContentComponent implements OnInit , OnDestroy{
     this.nameService.changeName('Reading');
     //getting Data
     this.articles = [];
+    this.loadingData = true;
     this.contentService.getContentfromDB(number).subscribe(
       data=> {
         this.loadingData = true;

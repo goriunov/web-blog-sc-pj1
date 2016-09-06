@@ -3,7 +3,6 @@ import {AuthService} from "../shared/auth.service";
 import {Router} from "@angular/router";
 
 @Component({
-      moduleId: module.id,
       selector: 'my-first-page',
       templateUrl: 'firstpage.template.html',
       styleUrls: ['firstpage.css']

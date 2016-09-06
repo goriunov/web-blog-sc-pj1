@@ -30,7 +30,7 @@ gulp.task('script' , function () {
     gulp.src(['!'+from +'dist/index.html', from +'dist/**/*' , '!'+from+'dist/**/*.js' , '!'+from+'dist/**/*.html'])
        .pipe(gulp.dest(to +'public/'));
     gulp.src(['!'+from +'dist/index.html', from +'dist/**/*.js' ])
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest(to +'public/'));
     gulp.src(['!'+from +'dist/index.html', from +'dist/**/*.html' ])
         .pipe(gulp.dest(to +'public/'));

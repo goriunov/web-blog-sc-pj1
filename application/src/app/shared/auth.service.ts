@@ -1,6 +1,5 @@
 
-import {EventEmitter} from "@angular/core";
-declare var  firebase: any;//Declare fare base for log with face book
+declare var  firebase: any; //Declare fare base for log with face book
 
 export class AuthService {
 

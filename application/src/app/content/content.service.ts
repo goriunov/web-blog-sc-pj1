@@ -1,9 +1,10 @@
 //Content service
-import { Injectable , EventEmitter} from '@angular/core';
+import { Injectable} from '@angular/core';
 import {Content} from "../shared/content";
 import {Headers, Http} from "@angular/http";
-import {Observable} from "rxjs";
-import {_catch} from "rxjs/operator/catch";
+import 'rxjs/add/operator/map';
+
+
 //Declare firebase
 declare var firebase:any;
 
@@ -25,7 +26,7 @@ export class ContentService {
       this.start  = this.start + 9;
     }
     //Check if we want to over go article and run loop
-    if(start != 0 && this.articles.length < 9){
+    if(start && start != 0 && this.articles.length < 9){
       this.start = 0;
     }
     //Actually getting content from DB

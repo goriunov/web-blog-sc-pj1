@@ -6,7 +6,6 @@ import {ContentService} from "../content.service";
 import {AuthService} from "../../shared/auth.service";
 
 @Component({
-  moduleId: module.id,
   selector: 'app-content-list',
   templateUrl: 'content-list.component.html',
   styleUrls: ['content-list.component.css'],
