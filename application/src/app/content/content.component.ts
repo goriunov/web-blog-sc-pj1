@@ -1,9 +1,7 @@
 import { Component, OnInit ,OnDestroy  } from '@angular/core';
-import {ContentListComponent} from "./content-list/content-list.component";
-import {EditContentComponent} from "./edit-content/edit-content.component";
 import {ContentService} from "../content/content.service";
 import {Content} from "../shared/content";
-import {ActivatedRoute, ROUTER_DIRECTIVES} from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 import {Subscription} from "rxjs/Rx";
 import {NameService} from "../name.service";
 
@@ -12,7 +10,6 @@ import {NameService} from "../name.service";
   selector: 'app-content',
   templateUrl: 'content.component.html',
   styleUrls: ['content.component.css'],
-  directives: [ContentListComponent , EditContentComponent , ROUTER_DIRECTIVES],
 })
 
 export class ContentComponent implements OnInit , OnDestroy{

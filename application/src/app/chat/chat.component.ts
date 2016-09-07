@@ -7,7 +7,6 @@ import {ChatService} from "./chat.service";
   selector: 'app-chat',
   templateUrl: 'chat.component.html',
   styleUrls: ['chat.component.css'],
-  directives:[ChatListComponent]
 })
 export class ChatComponent implements OnInit {
   messages : Message[];

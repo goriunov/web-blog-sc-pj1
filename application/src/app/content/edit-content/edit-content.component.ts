@@ -1,8 +1,10 @@
-import { Component, OnInit , OnDestroy , trigger, state, animate, transition, style } from '@angular/core';
-import {FormGroup, FormControl, FormArray, REACTIVE_FORM_DIRECTIVES, Validators} from "@angular/forms";
+
+
+import { Component, OnInit , OnDestroy} from '@angular/core';
+import {FormGroup, FormControl, FormArray, Validators} from "@angular/forms";
 import {ContentService} from "../content.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {Subscription, Observable} from "rxjs/Rx";
+import {Subscription} from "rxjs/Rx";
 import {Content} from "../../shared/content";
 import {AuthService} from "../../shared/auth.service";
 import {NameService} from "../../name.service";
@@ -15,13 +17,13 @@ declare var CKEDITOR: any;
   selector: 'app-edit-content',
   templateUrl: 'edit-content.component.html',
   styleUrls: ['edit-content.component.css'],
-  directives: [REACTIVE_FORM_DIRECTIVES],
 
 })
 
 
 export class EditContentComponent implements OnInit , OnDestroy {
   //Init variables
+  savingData: boolean = false;
   areYouIn="";
   clicked = false;
   private subscription: Subscription;
@@ -57,14 +59,14 @@ export class EditContentComponent implements OnInit , OnDestroy {
 
 // Add Sections in form
   onSelect(section){
-    (<FormArray>this.myForm.find('sections')).push(new FormControl(section , [Validators.required , atListOne]));
+    (<FormArray>this.myForm.controls['sections']).push(new FormControl(section , [Validators.required , atListOne]));
     this.sections.splice(this.sections.indexOf(section), 1);
   }
 
 //Remove sections from form
   onUnSelect(section){
-    this.sections.push((<FormArray>this.myForm.find('sections')).controls[section].value);
-    (<FormArray>this.myForm.find('sections')).removeAt(section);
+    this.sections.push((<FormArray>this.myForm.controls['sections']).controls[section].value);
+    (<FormArray>this.myForm.controls['sections']).removeAt(section);
   }
 
 
@@ -75,7 +77,7 @@ export class EditContentComponent implements OnInit , OnDestroy {
 
 
   ngOnInit() {
-
+    this.savingData = false;
     this.nameService.changeName("Writing");
     //Check if user sign in
     var  user = this.authService.currentUSer();
@@ -86,6 +88,7 @@ export class EditContentComponent implements OnInit , OnDestroy {
       if (this.shadow) {
         CKEDITOR.replace('editor1');
       }
+
       this.contService.getContentfromDB();
       //...................
 
@@ -131,6 +134,7 @@ export class EditContentComponent implements OnInit , OnDestroy {
 
 // Submit  form
   onSubmit(){
+    this.savingData = true;
 // Check user Auth access
 
     let user = this.authService.currentUSer();
@@ -141,9 +145,9 @@ export class EditContentComponent implements OnInit , OnDestroy {
       this.article = x;
 // Form which will be submitted (other wise can not get CKEditor value properly)
       const submitingForm = new FormGroup({
-        'header': new FormControl('' + this.myForm.find('header').value),
-        'description': new FormControl('' + this.myForm.find('description').value),
-        'imgUrl': new FormControl('' + this.myForm.find('imgUrl').value),
+        'header': new FormControl('' + this.myForm.controls['header'].value),
+        'description': new FormControl('' + this.myForm.controls['description'].value),
+        'imgUrl': new FormControl('' + this.myForm.controls['imgUrl'].value),
         'authorName': new FormControl('Author NAME'),
         'article': new FormControl(this.article),
         'sections': new FormArray(this.sectionsForm)

@@ -1,7 +1,22 @@
 <!--ALL FORM INPUTS FOR ADD AND  EDIT -->
+
 <div class="col-sm-10 col-sm-offset-1">
 
-  <div *ngIf="auth">
+    <div *ngIf="savingData">
+      <div style="text-align: center; margin-top:15%; color: grey;">
+        <br>
+        <h4>Saving article...</h4><br>
+        <div class="sk-folding-cube">
+          <div class="sk-cube1 sk-cube"></div>
+          <div class="sk-cube2 sk-cube"></div>
+          <div class="sk-cube4 sk-cube"></div>
+          <div class="sk-cube3 sk-cube"></div>
+        </div>
+      </div>
+    </div>
+
+
+  <div *ngIf="auth" [ngClass]="savingData ? 'hide' : ''">
     <!--Form creation-->
   <form [formGroup]="myForm" *ngIf="shadow">
 
@@ -53,7 +68,7 @@
             class="form-control"
             style="height: auto">
 
-         <span *ngFor="let selectedSection of myForm.find('sections').controls ; let i = index">
+         <span *ngFor="let selectedSection of myForm.controls.sections.controls ; let i = index">
            <input  class="btn btn-danger"
                    (click)="onUnSelect(i)"
                    formControlName="{{i}}"
@@ -75,45 +90,45 @@
 
 
   <!-- IMPORTANT CKEDITOR DO NOT TOUCH THIS PART OTHER WISE WILL LOOSE CK EDITOR -->
+  <div [ngClass]="savingData ? 'hide' : ''">
+    <fieldset class="form-group" >
+      <label > Article</label>
+      <textarea
+        class="form-control"
+        minlength="800"
+        name="editor1">{{selectedContent ? selectedContent.article : ''}}</textarea>
+    </fieldset>
+    <br>
 
-  <fieldset class="form-group" >
-    <label > Article</label>
-    <textarea
-      class="form-control"
-      minlength="800"
-      name="editor1">{{selectedContent ? selectedContent.article : ''}}</textarea>
-  </fieldset>
-  <br>
-
-  <!--Rules mus read -->
-  <div class="tri" (click)="opened? opened = false: opened = true">Must to read before save article<span class="caret"></span>
-    <div class="rules" [ngStyle]="opened ? {'display': 'block'} : {}">
-      <h3><em>Rules of this website:</em></h3><br>
-      <span style="color: red">- Do not publish article which does not contain appropriate content</span><br>
-      <span style="color: red">- Be kind to other people</span><br>
-      <span style="color: red">- Follow this rules</span><br><br>
-      <span style="text-align: center; color: green;">If you will not follow this rules your account will be blocked</span>
+    <!--Rules mus read -->
+    <div class="tri" (click)="opened? opened = false: opened = true">Must to read before save article<span class="caret"></span>
+      <div class="rules" [ngStyle]="opened ? {'display': 'block'} : {}">
+        <h3><em>Rules of this website:</em></h3><br>
+        <span style="color: red">- Do not publish article which does not contain appropriate content</span><br>
+        <span style="color: red">- Be kind to other people</span><br>
+        <span style="color: red">- Follow this rules</span><br><br>
+        <span style="text-align: center; color: green;">If you will not follow this rules your account will be blocked</span>
+      </div>
     </div>
+    <!---->
+
+    <!--If you try to save content with out authorization-->
+      {{areYouIn}}<br>
+    <!--Buttons  save and cancel-->
+      <button
+        *ngIf="auth"
+        type="button"
+        [disabled]='!myForm.valid || clicked'
+        (click)="onSubmit()"
+        class="btn btn-primary">{{id ? 'Save' : 'Create article'}}</button>
+
+
+      <button
+        *ngIf="auth"
+        class="btn btn-danger"
+        type="button"
+        (click)="onCancel()">Cancel</button>
   </div>
-  <!---->
-
-  <!--If you try to save content with out authorization-->
-    {{areYouIn}}<br>
-  <!--Buttons  save and cancel-->
-    <button
-      *ngIf="auth"
-      type="button"
-      [disabled]='!myForm.valid || clicked'
-      (click)="onSubmit()"
-      class="btn btn-primary">{{id ? 'Save' : 'Create article'}}</button>
-
-
-    <button
-      *ngIf="auth"
-      class="btn btn-danger"
-      type="button"
-      (click)="onCancel()">Cancel</button>
-
 </div>
 
 

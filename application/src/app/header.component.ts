@@ -1,6 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import {DropDownDirective} from "./dropdown.directive";
-import {ROUTER_DIRECTIVES , Router} from "@angular/router";
+import {Router} from "@angular/router";
 import {AuthService} from "./shared/auth.service";
 
 declare var firebase:any;
@@ -9,7 +8,6 @@ declare var firebase:any;
   selector: 'app-header',
   templateUrl: 'header.component.html',
   styleUrls: ['header.component.css'],
-  directives: [DropDownDirective , ROUTER_DIRECTIVES]
 })
 
 

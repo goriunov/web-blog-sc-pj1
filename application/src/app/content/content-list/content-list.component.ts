@@ -1,6 +1,6 @@
 import { Component, OnInit , Input  , OnDestroy , trigger, state, animate, transition, style } from '@angular/core';
 import {Content} from "../../shared/content";
-import {ActivatedRoute, ROUTER_DIRECTIVES} from "@angular/router";
+import {ActivatedRoute} from "@angular/router";
 import {Subscription} from "rxjs/Rx";
 import {ContentService} from "../content.service";
 import {AuthService} from "../../shared/auth.service";
@@ -9,7 +9,6 @@ import {AuthService} from "../../shared/auth.service";
   selector: 'app-content-list',
   templateUrl: 'content-list.component.html',
   styleUrls: ['content-list.component.css'],
-  directives: [ROUTER_DIRECTIVES],
   animations: [
     trigger('flyIn' , [
       state('in' , style({

@@ -11,6 +11,10 @@ div{
   transition: all 0.5s;
 
 }
+.hide{
+  display:none;
+}
+
 .tri{
   color:red;
   cursor: pointer;
@@ -34,7 +38,7 @@ input{
   margin : 2px;
 }
 
-.ng-dirty.ng-invalid{
+form .ng-dirty.ng-invalid{
   border:1px solid #ff1a1a;
 }
 .btn-primary{
