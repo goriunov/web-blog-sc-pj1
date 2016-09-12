@@ -1,13 +1,22 @@
 <div class ="row">
   <div class="container-fluid articles">
-    <div class="col-xs-11">
+    <div class="col-xs-11" >
         <div  *ngFor="let article of articles; let i = index">
   <!--Getting List of articles -->
           <app-content-list
-            *ngIf="article != null"
+            *ngIf="article != null;"
             [article]="article"
-            [index]="i"></app-content-list>
+            [index]="i" ></app-content-list>
+
         </div>
+
+
+      <div *ngIf="!loadingData && noArticles != 0">
+        <div style="text-align: center; margin-top:10%; color: grey;">
+          <br>
+          <h4>Ops.. No articles in this category please try another scope :(</h4><br>
+        </div>
+      </div>
 
       <div *ngIf="loadingData">
         <div style="text-align: center; margin-top:10%; color: grey;">
@@ -22,6 +31,7 @@
         </div>
       </div>
     </div>
+
 
     <!--Buttons to load new content or disable filters  , descriptions-->
   <footer style="text-align: center">
@@ -43,7 +53,7 @@
         <span class="tooltipt tip2">Description and rules</span>
       </div>
     <div class="toolt3">
-      <a [routerLink]="['/']"  class = "btn btn-success right_buttons">H</a>
+      <a [routerLink]="['/']"  class = "btn btn-success right_buttons"><i class="glyphicon glyphicon-home"></i></a>
       <span class="tooltipt tip3">Home Page</span>
     </div>
 

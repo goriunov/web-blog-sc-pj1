@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {ChatListComponent} from "./chat-list/chat-list.component";
 import {Message} from "../shared/message";
 import {ChatService} from "./chat.service";
 
@@ -42,12 +41,8 @@ export class ChatComponent implements OnInit {
       this.autoScroll();
     }else{
       this.userEmail ='';
-      this.message = new Message('Anonym-User', this.messageContent , 'no-email');
-      this.chatService.writeMessage(this.message);
-      this.messageContent = '';
       //do not permit send
       console.log('Not authorized');
-      this.autoScroll();
     }
   }
 
@@ -96,7 +91,7 @@ export class ChatComponent implements OnInit {
 
   //can send messages on Enter button
   pressEnter(event){
-    if (this.messageContent.length > 1) {
+    if ( this.isAutorized || this.messageContent.length > 1) {
       if (event.keyCode == 13) {
         this.sendMessage();
       }

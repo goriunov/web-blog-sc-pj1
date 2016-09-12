@@ -7,8 +7,8 @@ import {AuthService} from "../../shared/auth.service";
 
 @Component({
   selector: 'app-content-list',
-  templateUrl: 'content-list.component.html',
-  styleUrls: ['content-list.component.css'],
+  templateUrl: './content-list.component.html',
+  styleUrls: ['./content-list.component.css'],
   animations: [
     trigger('flyIn' , [
       state('in' , style({

@@ -8,8 +8,8 @@ import {NameService} from "../name.service";
 
 @Component({
   selector: 'app-content',
-  templateUrl: 'content.component.html',
-  styleUrls: ['content.component.css'],
+  templateUrl: './content.component.html',
+  styleUrls: ['./content.component.css'],
 })
 
 export class ContentComponent implements OnInit , OnDestroy{
@@ -19,6 +19,7 @@ export class ContentComponent implements OnInit , OnDestroy{
   articles : Content[] = []; //Main Front end Massive
   helper: Content [] = []; // get data from service and help do not get error 'section undefined'
   private id: string;
+  noArticles: number = 0;
   counter = 0;
   private loadingData = true;
 
@@ -48,6 +49,7 @@ export class ContentComponent implements OnInit , OnDestroy{
     this.loadingData = true;
     this.contentService.getContentfromDB(number).subscribe(
       data=> {
+        this.noArticles = 0;
         this.loadingData = true;
         this.helper = data;
         this.articles = [];
@@ -63,16 +65,20 @@ export class ContentComponent implements OnInit , OnDestroy{
           //Filter function  , divide on different areas
           if (this.articles.length > 0 ) {
             if (this.id != 'all' && this.id != null) {
+              this.noArticles = 1;
               for (let i = 0; i < this.articles.length; i++) {
                 var b: number = 0;
                 for (let j = 0; j < this.articles[i].sections.length; j++) {
                   if (this.articles[i].sections[j] == this.id) {
                     b = b + 1;
+
                     this.loadingData = false;
                   }
                 }
                 if (b < 1) {
                   this.articles[i] = null;
+                }else{
+                  this.noArticles = 0;
                 }
               }
             }

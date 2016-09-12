@@ -4,13 +4,13 @@ import {Router} from "@angular/router";
 
 @Component({
       selector: 'my-first-page',
-      templateUrl: 'firstpage.template.html',
-      styleUrls: ['firstpage.css']
+      templateUrl: './firstpage.template.html',
+      styleUrls: ['./firstpage.css']
 })
 
 export class FirstPageComponent implements OnInit{
   constructor(private auth: AuthService  , private router: Router){}
-  downButton: string = 'Continue without log in';
+  downButton: string = 'Continue without sign in';
 
   ngOnInit(){
 

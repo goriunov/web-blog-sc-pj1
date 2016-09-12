@@ -15,26 +15,29 @@
             <div class="dropdown dropped" dropDown >
               <a role="button"><b>Sort by<span class="caret"></span></b></a>
               <ul class="dropdown-menu pull-right" >
+                <li style="text-align: center; font-family:'Lobster', cursive;"><h3>Categories</h3></li>
+                <li role="separator" class="divider"></li>
+                <li ><a routerLinkActive="activated"
+                        [routerLink]="['content/Animation']"><img class="displayUserImg" src="assets/pictures/anime.jpg"><span class="sort-menu">Animation</span></a></li>
+
+                <li style="background: whitesmoke"><a routerLinkActive="activated"
+                                                      [routerLink]="['content/Comics']"><img class="displayUserImg" src="assets/pictures/comics.jpg"><span  class="sort-menu">Comics</span></a></li>
+
+                <li ><a routerLinkActive="activated"
+                        [routerLink]="['content/Films']"><img class="displayUserImg" src="assets/pictures/films.jpg"><span  class="sort-menu">Films</span></a></li>
+
+                <li style="background: whitesmoke"><a routerLinkActive="activated"
+                        [routerLink]="['content/Games']"><img class="displayUserImg" src="assets/pictures/games.jpg"><span  class="sort-menu">Games</span></a></li>
+
+                <li ><a routerLinkActive="activated"
+                        [routerLink]="['content/Programming']"><img class="displayUserImg" src="assets/pictures/programming.jpg"><span class="sort-menu">Programming</span></a></li>
+
+                <li style="background: whitesmoke"  ><a routerLinkActive="activated"
+                        [routerLink]="['content/Serials']"><img class="displayUserImg" src="assets/pictures/serials.jpg"><span   class="sort-menu">Serials</span></a></li>
+
                 <li><a routerLinkActive="activated"
                        [routerLink]="['content/Technology']"><img class="displayUserImg" src="assets/pictures/technology.jpg"><span class="sort-menu">Technology</span></a></li>
 
-                <li style="background: whitesmoke" ><a routerLinkActive="activated"
-                        [routerLink]="['content/Programming']"><img class="displayUserImg" src="assets/pictures/programming.jpg"><span class="sort-menu">Programming</span></a></li>
-
-                <li ><a routerLinkActive="activated"
-                       [routerLink]="['content/Anime']"><img class="displayUserImg" src="assets/pictures/anime.jpg"><span   class="sort-menu">Anime</span></a></li>
-
-                <li style="background: whitesmoke"><a routerLinkActive="activated"
-                       [routerLink]="['content/Comics']"><img class="displayUserImg" src="assets/pictures/comics.jpg"><span  class="sort-menu">Comics</span></a></li>
-
-                <li ><a routerLinkActive="activated"
-                       [routerLink]="['content/Serials']"><img class="displayUserImg" src="assets/pictures/serials.jpg"><span   class="sort-menu">Serials</span></a></li>
-
-                <li style="background: whitesmoke"><a routerLinkActive="activated"
-                       [routerLink]="['content/Films']"><img class="displayUserImg" src="assets/pictures/films.jpg"><span  class="sort-menu">Films</span></a></li>
-
-                <li ><a routerLinkActive="activated"
-                       [routerLink]="['content/Games']"><img class="displayUserImg" src="assets/pictures/games.jpg"><span s class="sort-menu">Games</span></a></li>
 
                 <li style="background: whitesmoke"><a routerLinkActive="activated"
                         [routerLink]="['content/Other']"><img class="displayUserImg" src="assets/pictures/other.jpg"><span class="sort-menu">Other</span></a></li>

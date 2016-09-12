@@ -14,6 +14,7 @@
 
 /*Buttons next page  , description */
 .right_buttons{
+  width: 40px;
   margin-top: 13px;
   transition: all 0.3s;
 }
@@ -58,7 +59,7 @@ footer{
 }
 
 .rules{
-  width: 37px;
+  width: 40px;
 }
 .toolt2:hover .tip2{
   margin-top: 40px;

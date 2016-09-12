@@ -37,6 +37,11 @@ footer{
 .links button{
   width: 160px;
   padding-left: 10px;
+
+}
+
+.singMenu{
+  text-align: center;
 }
 
 .login:hover{

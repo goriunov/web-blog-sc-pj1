@@ -18,15 +18,16 @@
 
   <div class="row">
     <div class="col-sm-8 bord">
-      <h2>What is it about ?</h2>
-      <p>This website is a blog where everyone can write anything while it is not going out of the 3 simple rules. As well this project is open source therefore everyone can look, copy code.</p>
-      <h3>Rules:</h3>
+      <h2>What is ScBlog ?</h2>
+      <p>ScBlog is a blog where you can broadcast anything. You can read and write articles,chat,create your own profile while you follow the simple rules mentioned below. All content provided on this blog is for informational purpose only. As well this project is open source therefore anyone can look, copy code.</p>
+      <h3>Our blog Rules:</h3>
       <ul>
-        <li><p>Do not publish article which contain inappropriate content</p></li>
-        <li><p>Be kind to other people</p></li>
-        <li><p>Follow this rules</p></li>
+        <li><p>Do not publish articles which contain inappropriate content.</p></li>
+        <li><p>Be nice to other people in chat.</p></li>
+        <li><p>Please follow these rules.</p></li>
       </ul>
-      <h3 *ngIf="downButton != 'Continue reading'">Sign in/Sign up:</h3>
+      <div class ="singMenu">
+        <h3 *ngIf="downButton != 'Continue reading'">Sign in/Sign up:</h3>
         <div *ngIf="downButton != 'Continue reading'" class="links">
           <button class="btn btn-social-icon btn-facebook login" (click)="faceBookLogIn()">
             Sign in with Facebook
@@ -36,44 +37,44 @@
             Sign in with Google
           </button>
         </div>
-      <div *ngIf="downButton == 'Continue reading'" class="links">
-        <a class="btn btn-primary" [routerLink]="['content']">{{downButton}}</a>
+        <div *ngIf="downButton == 'Continue reading'" class="links">
+          <a class="btn btn-primary" [routerLink]="['content']">{{downButton}}</a>
+        </div>
       </div>
-
     </div>
     <div class="col-sm-4 bord">
       <h2>Interface description:</h2>
       <p>Scope - group of articles</p>
       <p><span class="glyphicon glyphicon-align-left menu" aria-hidden="true"></span><span class="caret"></span> - options where you can : Log In / Sign Up , Create post , go to Home page.</p>
       <p>Sort by<span class="caret"></span> - enable filters (applied only on your current scope of articles).</p>
-      <p><button class = "btn btn-primary ">@</button> - button to load new scope of articles (disappeared when you are sorting).</p>
-      <p><a class = "btn btn-danger right_buttons">X</a> - button to disable filters (appeared when you are sorting).</p>
-      <p><button type="button"  class = "btn btn-info ">?</button> - rules and information about website.</p>
+      <p><button class = "btn btn-primary ">@</button> - button to load new scope of articles (disappeares when you are sorting).</p>
+      <p><a class = "btn btn-danger right_buttons">X</a> - button to disable filters (appeares when you are sorting).</p>
+      <p><button type="button"  class = "btn btn-info ">?</button> - rules and information of/about this website.</p>
       <p><a class="btn btn-primary">Edit</a> - appear under only your articles after you log in.</p>
       <p><strong>Click on article to open content.</strong></p>
-      <p>Click on chat in right bottom angle to open chat window.</p>
+      <p>Click on chat in right bottom corner to open chat window.</p>
     </div>
   </div>
   <!-- /.row -->
 
   <hr>
-    <div class="row">
-      <div class="col-sm-4 bord">
-        <img class="img-circle img-responsive img-center" src="assets/pictures/writing.png" alt="Loading....">
-        <h2>Writing</h2>
-        <p>Writing articles does not take a lot of time . </p> <p>1)Log in.</p> <p> 2)Press in right top menu button 'Create Post'.</p> <p>3)Write your article.</p>
-      </div>
-      <div class="col-sm-4 bord">
-        <img class="img-circle img-responsive img-center" src="assets/pictures/reading.png" alt="Loading....">
-        <h2>Reading</h2>
-        <p>Content open for everyone.</p>
-      </div>
-      <div class="col-sm-4 bord">
-        <img class="img-circle img-responsive img-center" src="assets/pictures/chatting.png" alt="Loading....">
-        <h2>Chatting</h2>
-        <p>Chat is a place where you can communicate with other people in real time . Chat available in right bottom of the screen.</p>
-      </div>
+  <div class="row">
+    <div class="col-sm-4 bord">
+      <img class="img-circle img-responsive img-center" src="assets/pictures/writing.png" alt="Loading....">
+      <h2>Writing</h2>
+      <p>Does not take long time to make a post. </p> <p>1)Log in.</p> <p> 2)Press in right top menu button 'Create Post'.</p> <p>3)Write your article.</p>
     </div>
+    <div class="col-sm-4 bord">
+      <img class="img-circle img-responsive img-center" src="assets/pictures/reading.png" alt="Loading....">
+      <h2>Reading</h2>
+      <p>Read what others post in different categories (Animation, Comics, Films, Games, Programming, Serial, Technology, or Other) all this categories are available in Sort by menu.</p>
+    </div>
+    <div class="col-sm-4 bord">
+      <img class="img-circle img-responsive img-center" src="assets/pictures/chatting.png" alt="Loading....">
+      <h2>Chatting</h2>
+      <p>Chat with other people in real time , chat is available in right bottom corner. Press on chat window to open it (You must be sign in to use chat).</p>
+    </div>
+  </div>
 
   <footer class="links" style="float:left;">
     <a class="btn btn-primary" [routerLink]="['content']">{{downButton}}</a>

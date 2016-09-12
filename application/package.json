@@ -8,14 +8,12 @@
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
-    "e2e": "protractor",
-    "ngc": "ngc"
+    "e2e": "protractor"
   },
   "private": true,
   "dependencies": {
     "@angular/common": "2.0.0-rc.6",
     "@angular/compiler": "2.0.0-rc.6",
-    "@angular/compiler-cli": "^0.6.0",
     "@angular/core": "2.0.0-rc.6",
     "@angular/forms": "2.0.0-rc.6",
     "@angular/http": "2.0.0-rc.6",
