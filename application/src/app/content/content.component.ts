@@ -1,5 +1,5 @@
 import { Component, OnInit ,OnDestroy  } from '@angular/core';
-import {ContentService} from "../content/content.service";
+import {ContentService} from "./content.service";
 import {Content} from "../shared/content";
 import {ActivatedRoute} from '@angular/router';
 import {Subscription} from "rxjs/Rx";

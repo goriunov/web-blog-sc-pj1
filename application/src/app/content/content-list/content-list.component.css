@@ -8,6 +8,7 @@
 
 .opened{
   border-left: 5px solid #303F9F !important;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -17,6 +18,7 @@
 
 .artName{
   font-size: 25px;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   font-family: 'Lobster', cursive;
 }
@@ -27,6 +29,7 @@
 }
 
 .onhover{
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -41,6 +44,7 @@
 
 
 img{
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 .opened .mainImg{

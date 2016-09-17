@@ -30,6 +30,11 @@ small{
   right:0;
   left:0;
   height: 10px;
+  background:#3F51B5;
+  background: -webkit-linear-gradient(
+  left,
+  #1A237E, #3F51B5 , #1A237E
+  );
   background: linear-gradient(
   to right,
   #1A237E, #3F51B5 , #1A237E
@@ -46,17 +51,17 @@ small{
 
 /*Menu animation*/
 .menu{
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.menu:hover{
-  -ms-transform: rotate(90deg); /* IE 9 */
+.menu:hover{ /* IE 9 */
   -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-  -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
 .sort-menu{
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   font-family: 'Lobster', cursive;
 }
@@ -101,11 +106,9 @@ a{
   text-align: left;
   list-style: none;
   background-color: white;
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   border: 1px solid gray;
   border: 1px solid rgba(0,0,0,.15);
-  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
   box-shadow: 0 5px 12px #888888;
 }
 .navbar-default >.navbar-nav>.open > a:hover{

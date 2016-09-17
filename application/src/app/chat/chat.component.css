@@ -16,11 +16,17 @@
 .header{
   padding: 10px;
   color:white;
+  background:#3F51B5;
+  background: -webkit-linear-gradient(
+    left,
+     #3F51B5 , #1A237E
+  );
   background: linear-gradient(
     to right,
      #3F51B5 , #1A237E
   );
   width: 100px;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -31,6 +37,11 @@
 .opened{
   padding: 10px;
   color:white;
+  background:#3F51B5;
+  background: -webkit-linear-gradient(
+    left,
+    #3F51B5 , #1A237E
+  );
   background: linear-gradient(
     to right,
     #3F51B5 , #1A237E

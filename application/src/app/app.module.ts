@@ -27,6 +27,5 @@ import {ContentListComponent} from "./content/content-list/content-list.componen
   providers: [ContentService , AuthService , ChatService , {provide: LocationStrategy, useClass: HashLocationStrategy} , NameService ,  DropDownDirective]
 })
 
-export class AppModule
-{
+export class AppModule{
 }

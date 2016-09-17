@@ -18,6 +18,11 @@ footer{
   text-align: center;
   color: white;
   font-family: 'Lobster', cursive;
+  background:#3F51B5;
+  background: -webkit-linear-gradient(
+    left,
+    #1A237E, #3F51B5 , #1A237E
+  );
   background: linear-gradient(
     to right,
     #1A237E, #3F51B5 , #1A237E
