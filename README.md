@@ -13,9 +13,10 @@
 5. Go to the localhost:3000
 
 //Only if you want to change code
+##
 4. Navigate to the application folder .
-3. Run comand in Terminal(Console) 'npm install'.
-5. Navigate to application folder in a project
-6. Run ng build -prod 
-7. After => Navigate to project folder and run 'npm run gulp' => then  'npm start'
-8. Go to localhost:3000 in your web browser.
+5. Run comand in Terminal(Console) 'npm install'.
+6. Navigate to application folder in a project
+7. Run ng build -prod 
+8. After => Navigate to project folder and run 'npm run gulp' => then  'npm start'
+9. Go to localhost:3000 in your web browser.
