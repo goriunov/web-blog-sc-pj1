@@ -9,6 +9,9 @@
 1. Clone repo.
 2. Navigate to this repo-folder.
 3. Run comand in Terminal(Console) 'npm install'.
+4. After complete run npm start
+
+//Only if you want to change code
 4. Navigate to the application folder .
 3. Run comand in Terminal(Console) 'npm install'.
 
