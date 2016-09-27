@@ -2,6 +2,9 @@
 
 ##Project was builded for learning reason, tools used: NodeJS, Firebase, Angular2, HTML5, CSS3, Bootstrap, Gulp + some other. 
 
+###Live link : http://blog-sc.herokuapp.com/
+###Website may load slowly because it is using hosting which turn off server if no one use it. Therefor be patient 
+
 ## Preporation 
 1. Clone repo.
 2. Navigate to this repo-folder.
